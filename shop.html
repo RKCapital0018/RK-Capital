@@ -1,1 +1,61 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop – ApnaBazaar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="brand">
+    <img src="logo.png" class="logo">
+    <div class="brand-text">
+      <div class="brand-name">ApnaBazaar</div>
+      <div class="tagline">LOCAL • FAST • TRUSTED</div>
+    </div>
+  </div>
+</header>
+
+<section class="shop-profile">
+  <img id="shopBanner" class="shop-banner">
+
+  <h2 id="shopName"></h2>
+  <p id="shopAddress"></p>
+</section>
+
+<section class="products">
+  <h2>Products Available</h2>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- BUY MODAL -->
+<div class="buy-modal" id="buyModal">
+  <div class="buy-modal-content">
+    <form class="buy-form">
+
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="buyerName">
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="text" id="buyerPhone">
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="modal-cancel" onclick="closeModal()">Cancel</button>
+        <button type="button" class="modal-confirm" onclick="confirmOrder()">Continue to WhatsApp</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
