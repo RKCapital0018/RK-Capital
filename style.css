@@ -388,3 +388,69 @@ canvas {
   display: flex;
   opacity: 1;
 }
+/* ===== DARK / LIGHT MODE TOGGLE ===== */
+
+.theme-toggle {
+  margin-left: 20px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background: linear-gradient(to right, #d4af37, #facc15);
+  color: #000;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Smooth transition */
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* LIGHT MODE STYLES */
+
+body.light-mode {
+  background: #f8fafc;
+  color: #111;
+}
+
+body.light-mode header {
+  background: #ffffff;
+}
+
+body.light-mode .hero {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+}
+
+body.light-mode .services,
+body.light-mode .about,
+body.light-mode .contact {
+  background: #f1f5f9;
+}
+
+body.light-mode .card {
+  background: #ffffff;
+  color: #000;
+}
+
+body.light-mode .trust-section,
+body.light-mode .emi-section,
+body.light-mode .eligibility-section {
+  background: #ffffff;
+}
+
+body.light-mode .emi-box,
+body.light-mode .eligibility-box,
+body.light-mode .trust-box {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #000;
+}
+
+body.light-mode .result-box {
+  background: #ffffff;
+}
