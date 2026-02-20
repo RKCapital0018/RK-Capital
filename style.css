@@ -600,3 +600,129 @@ body.light-mode canvas {
   border-bottom: 1px solid rgba(255,255,255,0.1);
   font-size: 16px;
 }
+/* ============================= */
+/* ===== MOBILE RESPONSIVE ===== */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 8px;
+    display: inline-block;
+  }
+
+  .theme-toggle {
+    margin-top: 10px;
+  }
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 70px 20px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TOGGLE BUTTONS */
+  .calculator-toggle {
+    padding: 80px 20px 30px;
+  }
+
+  .toggle-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .toggle-buttons button {
+    width: 100%;
+  }
+
+  /* CALCULATOR SECTIONS */
+  .emi-section,
+  .eligibility-section,
+  .document-section {
+    padding: 80px 15px;
+  }
+
+  .emi-box,
+  .eligibility-box,
+  .document-box {
+    padding: 25px;
+  }
+
+  .emi-wrapper h2,
+  .eligibility-wrapper h2,
+  .document-wrapper h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  /* RESULT BOX STACK */
+  .results {
+    flex-direction: column;
+  }
+
+  .result-box {
+    margin: 10px 0;
+  }
+
+  /* INPUT FIELDS */
+  .input-group label {
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+
+  /* TRUST SECTION */
+  .trust-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trust-box {
+    width: 100%;
+    padding: 25px;
+  }
+
+  /* DOCUMENT LIST */
+  #documentList li {
+    font-size: 14px;
+  }
+
+  /* ABOUT & CONTACT */
+  .about,
+  .contact {
+    padding: 70px 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 13px;
+  }
+
+}
