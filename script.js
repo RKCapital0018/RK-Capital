@@ -63,9 +63,14 @@ loanTenure.addEventListener("input", updateValues);
 
 updateValues();
 
-// TRUST COUNTER ANIMATION
+// TRUST COUNTER ANIMATION (FIXED VERSION)
+
+let counterStarted = false;
 
 function startCounterAnimation() {
+    if (counterStarted) return; // Prevent running multiple times
+    counterStarted = true;
+
     const counters = document.querySelectorAll('.counter');
 
     counters.forEach(counter => {
@@ -88,6 +93,19 @@ function startCounterAnimation() {
         updateCounter();
     });
 }
+
+window.addEventListener("scroll", function () {
+    const section = document.querySelector(".trust-section");
+
+    if (!section) return;
+
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if (sectionPosition < screenPosition - 100) {
+        startCounterAnimation();
+    }
+});
 
 // Run animation when section appears on screen
 window.addEventListener("scroll", function () {
