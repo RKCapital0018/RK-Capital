@@ -63,21 +63,22 @@ loanTenure.addEventListener("input", updateValues);
 
 updateValues();
 
-document.addEventListener("DOMContentLoaded", function () {
+// TRUST COUNTER ANIMATION
 
+function startCounterAnimation() {
     const counters = document.querySelectorAll('.counter');
 
     counters.forEach(counter => {
         counter.innerText = '0';
 
+        const target = +counter.getAttribute('data-target');
+        const increment = target / 100;
+
         const updateCounter = () => {
-            const target = +counter.getAttribute('data-target');
-            const c = +counter.innerText;
+            const current = +counter.innerText;
 
-            const increment = target / 100;
-
-            if (c < target) {
-                counter.innerText = Math.ceil(c + increment);
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
                 setTimeout(updateCounter, 20);
             } else {
                 counter.innerText = target;
@@ -86,5 +87,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updateCounter();
     });
+}
 
+// Run animation when section appears on screen
+window.addEventListener("scroll", function () {
+    const section = document.querySelector(".trust-section");
+
+    if (!section) return;
+
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if (sectionPosition < screenPosition - 100) {
+        startCounterAnimation();
+    }
 });
