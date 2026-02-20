@@ -150,4 +150,22 @@ existingEMI.addEventListener("input", calculateEligibility);
 eligibilityRate.addEventListener("input", calculateEligibility);
 eligibilityTenure.addEventListener("input", calculateEligibility);
     
+ // CALCULATOR TOGGLE FUNCTION
+
+window.showCalculator = function (id) {
+
+    const sections = document.querySelectorAll(".calculator-section");
+
+    sections.forEach(section => {
+        section.classList.remove("active");
+    });
+
+    const selected = document.getElementById(id);
+
+    if (selected) {
+        selected.classList.add("active");
+        selected.scrollIntoView({ behavior: "smooth" });
+    }
+};
+    
 });
