@@ -1,13 +1,64 @@
-// Scroll Animation
-const cards = document.querySelectorAll(".card");
+const loanAmount = document.getElementById("loanAmount");
+const interestRate = document.getElementById("interestRate");
+const loanTenure = document.getElementById("loanTenure");
 
-window.addEventListener("scroll", () => {
-  cards.forEach(card => {
-    const position = card.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.2;
-    if(position < screenPosition){
-      card.style.opacity = "1";
-      card.style.transform = "translateY(0)";
+const emiText = document.getElementById("emi");
+const totalInterestText = document.getElementById("totalInterest");
+const totalPaymentText = document.getElementById("totalPayment");
+
+const loanAmountValue = document.getElementById("loanAmountValue");
+const interestRateValue = document.getElementById("interestRateValue");
+const loanTenureValue = document.getElementById("loanTenureValue");
+
+let emiChart;
+
+function calculateEMI() {
+    let P = parseFloat(loanAmount.value);
+    let R = parseFloat(interestRate.value) / 12 / 100;
+    let N = parseFloat(loanTenure.value) * 12;
+
+    let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+    let totalPayment = EMI * N;
+    let totalInterest = totalPayment - P;
+
+    emiText.innerText = "₹ " + EMI.toFixed(0);
+    totalInterestText.innerText = "₹ " + totalInterest.toFixed(0);
+    totalPaymentText.innerText = "₹ " + totalPayment.toFixed(0);
+
+    updateChart(P, totalInterest);
+}
+
+function updateChart(principal, interest) {
+    const ctx = document.getElementById("emiChart").getContext("2d");
+
+    if (emiChart) {
+        emiChart.destroy();
     }
-  });
-});
+
+    emiChart = new Chart(ctx, {
+        type: "pie",
+        data: {
+            labels: ["Principal", "Interest"],
+            datasets: [{
+                data: [principal, interest],
+                backgroundColor: ["#0a1f44", "#d4af37"]
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+}
+
+function updateValues() {
+    loanAmountValue.innerText = loanAmount.value;
+    interestRateValue.innerText = interestRate.value;
+    loanTenureValue.innerText = loanTenure.value;
+    calculateEMI();
+}
+
+loanAmount.addEventListener("input", updateValues);
+interestRate.addEventListener("input", updateValues);
+loanTenure.addEventListener("input", updateValues);
+
+updateValues();
