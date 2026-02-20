@@ -42,7 +42,49 @@
     <div class="card">🏅 Gold Loan</div>
   </div>
 </section>
+<section class="emi-section">
+  <div class="emi-wrapper">
+    <h2>RK Capital – EMI Calculator</h2>
 
+    <div class="emi-box">
+
+      <div class="input-group">
+        <label>Loan Amount: ₹ <span id="loanAmountValue">500000</span></label>
+        <input type="range" id="loanAmount" min="10000" max="5000000" step="10000" value="500000">
+      </div>
+
+      <div class="input-group">
+        <label>Interest Rate: <span id="interestRateValue">8.5</span>%</label>
+        <input type="range" id="interestRate" min="5" max="20" step="0.1" value="8.5">
+      </div>
+
+      <div class="input-group">
+        <label>Loan Tenure: <span id="loanTenureValue">5</span> Years</label>
+        <input type="range" id="loanTenure" min="1" max="30" step="1" value="5">
+      </div>
+
+      <div class="results">
+        <div class="result-box">
+          <p>Monthly EMI</p>
+          <h3 id="emi">₹ 0</h3>
+        </div>
+        <div class="result-box">
+          <p>Total Interest</p>
+          <h3 id="totalInterest">₹ 0</h3>
+        </div>
+        <div class="result-box">
+          <p>Total Payment</p>
+          <h3 id="totalPayment">₹ 0</h3>
+        </div>
+      </div>
+
+      <canvas id="emiChart"></canvas>
+
+    </div>
+  </div>
+</section>
+
+  
 <section class="about" id="about">
   <h2>Why Choose RK Capital?</h2>
   <p>We simplify financial solutions across Akola, Amravati & Nagpur with complete transparency and expert guidance.</p>
@@ -58,6 +100,8 @@
   <p>© 2026 RK Capital Financial Services</p>
 </footer>
 
+<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
