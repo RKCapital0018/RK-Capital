@@ -413,44 +413,94 @@ body {
 
 /* LIGHT MODE STYLES */
 
+/* ===== REFINED LIGHT MODE (CORPORATE STYLE) ===== */
+
 body.light-mode {
-  background: #f8fafc;
-  color: #111;
+  background: #f4f6f9;
+  color: #1e293b;
 }
 
+/* Header */
 body.light-mode header {
   background: #ffffff;
+  backdrop-filter: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* Hero */
 body.light-mode .hero {
-  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  background: #ffffff;
 }
 
+body.light-mode .hero-content span {
+  background: none;
+  color: #1e293b;
+}
+
+/* Sections */
 body.light-mode .services,
 body.light-mode .about,
-body.light-mode .contact {
-  background: #f1f5f9;
+body.light-mode .contact,
+body.light-mode .calculator-toggle {
+  background: #f4f6f9;
 }
 
+/* Cards */
 body.light-mode .card {
   background: #ffffff;
-  color: #000;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  backdrop-filter: none;
 }
 
-body.light-mode .trust-section,
+/* Trust Section */
+body.light-mode .trust-section {
+  background: #ffffff;
+}
+
+body.light-mode .trust-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+body.light-mode .trust-box h3 {
+  background: none;
+  color: #0f172a;
+}
+
+/* Calculator Sections */
 body.light-mode .emi-section,
 body.light-mode .eligibility-section {
-  background: #ffffff;
+  background: #f4f6f9;
 }
 
 body.light-mode .emi-box,
-body.light-mode .eligibility-box,
-body.light-mode .trust-box {
-  background: #f1f5f9;
+body.light-mode .eligibility-box {
+  background: #ffffff;
   border: 1px solid #e2e8f0;
-  color: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
+body.light-mode .result-box {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+body.light-mode input {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+}
+
+/* Buttons */
+body.light-mode .btn,
+body.light-mode .toggle-buttons button,
+body.light-mode .theme-toggle {
+  background: #1e293b;
+  color: #ffffff;
+  box-shadow: none;
+}
 body.light-mode .result-box {
   background: #ffffff;
 }
