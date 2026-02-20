@@ -63,50 +63,56 @@ loanTenure.addEventListener("input", updateValues);
 
 updateValues();
 
-// TRUST COUNTER ANIMATION (FIXED VERSION)
+// TRUST COUNTER ANIMATION - FINAL FIXED VERSION
 
-let counterStarted = false;
+document.addEventListener("DOMContentLoaded", function () {
 
-function startCounterAnimation() {
-    if (counterStarted) return; // Prevent running multiple times
-    counterStarted = true;
-
-    const counters = document.querySelectorAll('.counter');
-
-    counters.forEach(counter => {
-        counter.innerText = '0';
-
-        const target = +counter.getAttribute('data-target');
-        const increment = target / 100;
-
-        const updateCounter = () => {
-            const current = +counter.innerText;
-
-            if (current < target) {
-                counter.innerText = Math.ceil(current + increment);
-                setTimeout(updateCounter, 20);
-            } else {
-                counter.innerText = target;
-            }
-        };
-
-        updateCounter();
-    });
-}
-
-window.addEventListener("scroll", function () {
     const section = document.querySelector(".trust-section");
+    const counters = document.querySelectorAll(".counter");
 
-    if (!section) return;
+    if (!section || counters.length === 0) return;
 
-    const sectionPosition = section.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight;
+    let counterStarted = false;
 
-    if (sectionPosition < screenPosition - 100) {
-        startCounterAnimation();
-    }
+    const startCounter = () => {
+        if (counterStarted) return;
+        counterStarted = true;
+
+        counters.forEach(counter => {
+            counter.innerText = "0";
+
+            const target = +counter.getAttribute("data-target");
+            const increment = target / 100;
+
+            const updateCounter = () => {
+                const current = +counter.innerText;
+
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + increment);
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCounter();
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter();
+                }
+            });
+        },
+        { threshold: 0.4 }
+    );
+
+    observer.observe(section);
+
 });
-
 // Run animation when section appears on screen
 window.addEventListener("scroll", function () {
     const section = document.querySelector(".trust-section");
