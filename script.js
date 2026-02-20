@@ -167,5 +167,20 @@ window.showCalculator = function (id) {
         selected.scrollIntoView({ behavior: "smooth" });
     }
 };
+// DARK MODE TOGGLE
+
+const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", function () {
+
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        toggleBtn.innerText = "☀";
+    } else {
+        toggleBtn.innerText = "🌙";
+    }
+
+});
     
 });
