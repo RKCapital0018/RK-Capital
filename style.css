@@ -162,3 +162,70 @@ footer{
   text-align:center;
   background:#020617;
 }
+.emi-section {
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #0a1f44, #12316b);
+  display: flex;
+  justify-content: center;
+}
+
+.emi-wrapper {
+  max-width: 800px;
+  width: 100%;
+  color: #fff;
+}
+
+.emi-wrapper h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.emi-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  color: #000;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #d4af37;
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.result-box {
+  flex: 1;
+  min-width: 150px;
+  background: #f4f7ff;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.result-box h3 {
+  color: #0a1f44;
+  margin-top: 5px;
+}
+
+canvas {
+  margin-top: 30px;
+}
