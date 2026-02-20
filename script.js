@@ -244,5 +244,69 @@ downloadBtn.addEventListener("click", function () {
     doc.save("RK-Capital-EMI-Schedule.pdf");
 
 });
+
+// DOCUMENT CHECKLIST GENERATOR
+
+const loanTypeSelect = document.getElementById("loanTypeSelect");
+const documentList = document.getElementById("documentList");
+
+const documentsData = {
+    home: [
+        "Aadhaar Card",
+        "PAN Card",
+        "Income Proof (ITR / Salary Slip)",
+        "Bank Statement (6 Months)",
+        "Property Documents"
+    ],
+    personal: [
+        "Aadhaar Card",
+        "PAN Card",
+        "Salary Slip / Income Proof",
+        "Bank Statement (3-6 Months)"
+    ],
+    business: [
+        "Aadhaar Card",
+        "PAN Card",
+        "Business Registration Proof",
+        "GST Returns",
+        "Bank Statement (6-12 Months)"
+    ],
+    car: [
+        "Aadhaar Card",
+        "PAN Card",
+        "Income Proof",
+        "Bank Statement",
+        "Car Quotation"
+    ],
+    lap: [
+        "Aadhaar Card",
+        "PAN Card",
+        "Income Proof",
+        "Bank Statement",
+        "Property Ownership Papers"
+    ],
+    gold: [
+        "Aadhaar Card",
+        "PAN Card",
+        "Gold Ornaments"
+    ]
+};
+
+loanTypeSelect.addEventListener("change", function () {
+
+    const selectedLoan = loanTypeSelect.value;
+    documentList.innerHTML = "";
+
+    if (documentsData[selectedLoan]) {
+
+        documentsData[selectedLoan].forEach(doc => {
+            const li = document.createElement("li");
+            li.textContent = "✔ " + doc;
+            documentList.appendChild(li);
+        });
+
+    }
+
+});
     
 });
