@@ -600,17 +600,21 @@ body.light-mode canvas {
   border-bottom: 1px solid rgba(255,255,255,0.1);
   font-size: 16px;
 }
+
 /* ============================= */
-/* ===== MOBILE RESPONSIVE ===== */
+/* ===== PREMIUM MOBILE VIEW === */
 /* ============================= */
 
 @media (max-width: 768px) {
 
+  body {
+    font-size: 14px;
+  }
+
   /* HEADER */
   header {
     flex-direction: column;
-    padding: 15px 20px;
-    text-align: center;
+    padding: 15px;
   }
 
   nav {
@@ -618,111 +622,137 @@ body.light-mode canvas {
   }
 
   nav a {
-    margin: 8px;
-    display: inline-block;
+    margin: 6px 8px;
+    font-size: 14px;
   }
 
   .theme-toggle {
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   /* HERO */
+  .hero {
+    padding: 0 15px;
+  }
+
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 26px;
+    line-height: 1.3;
   }
 
   .hero p {
     font-size: 14px;
   }
 
-  /* SERVICES */
-  .services {
-    padding: 70px 20px;
-  }
-
+  /* SERVICES - 2 COLUMN GRID */
   .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* TOGGLE BUTTONS */
-  .calculator-toggle {
-    padding: 80px 20px 30px;
-  }
-
-  .toggle-buttons {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
+  .card {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  /* TOGGLE BUTTONS */
+  .toggle-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
   .toggle-buttons button {
-    width: 100%;
+    font-size: 13px;
+    padding: 10px;
   }
 
   /* CALCULATOR SECTIONS */
   .emi-section,
   .eligibility-section,
   .document-section {
-    padding: 80px 15px;
+    padding: 60px 15px;
   }
 
   .emi-box,
   .eligibility-box,
   .document-box {
-    padding: 25px;
+    padding: 20px;
+    border-radius: 18px;
   }
 
   .emi-wrapper h2,
   .eligibility-wrapper h2,
   .document-wrapper h2 {
-    font-size: 22px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
-  /* RESULT BOX STACK */
+  /* RESULT BOXES 2 PER ROW */
   .results {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .result-box {
-    margin: 10px 0;
+    margin: 0;
+    padding: 15px;
+    font-size: 13px;
   }
 
-  /* INPUT FIELDS */
+  .result-box h3 {
+    font-size: 16px;
+  }
+
+  /* INPUT GROUP */
+  .input-group {
+    margin-bottom: 18px;
+  }
+
   .input-group label {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   input,
   select {
-    font-size: 14px;
+    font-size: 13px;
+    padding: 10px;
   }
 
-  /* TRUST SECTION */
+  /* TRUST SECTION - 2 PER ROW */
   .trust-container {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
 
   .trust-box {
-    width: 100%;
-    padding: 25px;
+    padding: 20px;
+  }
+
+  .trust-box h3 {
+    font-size: 22px;
+  }
+
+  .trust-box p {
+    font-size: 13px;
   }
 
   /* DOCUMENT LIST */
   #documentList li {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   /* ABOUT & CONTACT */
   .about,
   .contact {
-    padding: 70px 20px;
+    padding: 60px 20px;
   }
 
   /* FOOTER */
   footer {
-    font-size: 13px;
+    font-size: 12px;
   }
 
 }
