@@ -350,3 +350,41 @@ canvas {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+/* ===== CALCULATOR TOGGLE ===== */
+
+.calculator-toggle {
+  padding: 120px 20px 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f172a, #111827);
+}
+
+.toggle-buttons button {
+  margin: 15px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(to right, #d4af37, #facc15);
+  color: #000;
+  transition: 0.3s;
+}
+
+.toggle-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #d4af37;
+}
+
+/* Hide calculators initially */
+.calculator-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.calculator-section.active {
+  display: flex;
+  opacity: 1;
+}
