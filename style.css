@@ -552,3 +552,51 @@ body.light-mode .eligibility-result h3 {
 body.light-mode canvas {
   margin-top: 60px;
 }
+/* ===== DOCUMENT CHECKLIST ===== */
+
+.document-section {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #0f172a, #111827);
+  display: flex;
+  justify-content: center;
+}
+
+.document-wrapper {
+  max-width: 800px;
+  width: 100%;
+  color: #fff;
+}
+
+.document-wrapper h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 34px;
+}
+
+.document-box {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.document-box select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+#documentList {
+  margin-top: 30px;
+  list-style: none;
+}
+
+#documentList li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 16px;
+}
