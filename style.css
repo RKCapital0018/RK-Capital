@@ -756,3 +756,67 @@ body.light-mode canvas {
   }
 
 }
+/* ===== MOBILE PERFECT CENTER ALIGNMENT FIX ===== */
+
+@media (max-width: 768px) {
+
+  /* Center All Section Wrappers */
+  .hero-content,
+  .services,
+  .about,
+  .contact,
+  .emi-wrapper,
+  .eligibility-wrapper,
+  .document-wrapper,
+  .trust-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Center Calculator Cards */
+  .emi-box,
+  .eligibility-box,
+  .document-box {
+    margin: 0 auto;
+  }
+
+  /* Center Result Grid */
+  .results {
+    justify-items: center;
+  }
+
+  .result-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Center Toggle Section */
+  .calculator-toggle {
+    text-align: center;
+  }
+
+  .toggle-buttons {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Center Trust Grid */
+  .trust-container {
+    justify-items: center;
+    align-items: center;
+  }
+
+  .trust-box {
+    width: 100%;
+  }
+
+  /* Center Document List */
+  #documentList {
+    text-align: left;
+    margin: 20px auto 0 auto;
+    max-width: 100%;
+  }
+
+}
