@@ -162,69 +162,95 @@ footer{
   text-align:center;
   background:#020617;
 }
+/* ===== PREMIUM EMI CALCULATOR ===== */
+
 .emi-section {
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #0a1f44, #12316b);
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #111827, #1f2937);
   display: flex;
   justify-content: center;
 }
 
 .emi-wrapper {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   color: #fff;
 }
 
 .emi-wrapper h2 {
   text-align: center;
-  margin-bottom: 30px;
-  font-weight: 600;
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .emi-box {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  color: #000;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  transition: 0.4s;
+}
+
+.emi-box:hover {
+  transform: translateY(-5px);
 }
 
 .input-group {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .input-group label {
-  display: block;
-  margin-bottom: 8px;
   font-weight: 500;
+  font-size: 16px;
+  color: #e2e8f0;
 }
 
 input[type="range"] {
   width: 100%;
   accent-color: #d4af37;
+  margin-top: 10px;
 }
 
 .results {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .result-box {
   flex: 1;
-  min-width: 150px;
-  background: #f4f7ff;
-  margin: 10px;
-  padding: 15px;
-  border-radius: 10px;
+  min-width: 180px;
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
   text-align: center;
+  margin: 10px;
+  transition: 0.4s;
+}
+
+.result-box:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-5px);
 }
 
 .result-box h3 {
-  color: #0a1f44;
-  margin-top: 5px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(to right, #d4af37, #facc15);
+  -webkit-background-clip: text;
+  color: transparent;
 }
+
+canvas {
+  margin-top: 50px;
+}
+
 /* ===== PREMIUM TRUST SECTION ===== */
 
 .trust-section {
