@@ -469,38 +469,86 @@ body.light-mode .trust-box h3 {
   color: #0f172a;
 }
 
-/* Calculator Sections */
+/* ===== PREMIUM LIGHT MODE CALCULATORS ===== */
+
+/* Section Background */
 body.light-mode .emi-section,
 body.light-mode .eligibility-section {
-  background: #f4f6f9;
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
 }
 
+/* Calculator Card */
 body.light-mode .emi-box,
 body.light-mode .eligibility-box {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.05),
+    0 2px 6px rgba(0, 0, 0, 0.03);
+  padding: 55px;
+  transition: 0.3s ease;
 }
 
+/* Soft hover lift */
+body.light-mode .emi-box:hover,
+body.light-mode .eligibility-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 18px 40px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+body.light-mode .emi-wrapper h2,
+body.light-mode .eligibility-wrapper h2 {
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+body.light-mode .eligibility-box input,
+body.light-mode .emi-box input[type="number"] {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+body.light-mode .eligibility-box input:focus,
+body.light-mode .emi-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Range Slider Accent */
+body.light-mode input[type="range"] {
+  accent-color: #2563eb;
+}
+
+/* Result Cards */
 body.light-mode .result-box {
-  background: #f8fafc;
-  color: #1e293b;
+  background: #f9fafb;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  padding: 25px;
 }
 
-body.light-mode input {
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  color: #1e293b;
+/* Result Numbers */
+body.light-mode .result-box h3,
+body.light-mode .eligibility-result h3 {
+  background: linear-gradient(to right, #1e40af, #2563eb);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 26px;
 }
 
-/* Buttons */
-body.light-mode .btn,
-body.light-mode .toggle-buttons button,
-body.light-mode .theme-toggle {
-  background: #1e293b;
-  color: #ffffff;
-  box-shadow: none;
-}
-body.light-mode .result-box {
-  background: #ffffff;
+/* Chart spacing */
+body.light-mode canvas {
+  margin-top: 60px;
 }
