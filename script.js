@@ -110,4 +110,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(section);
 
+// LOAN ELIGIBILITY CALCULATOR
+
+const monthlyIncome = document.getElementById("monthlyIncome");
+const existingEMI = document.getElementById("existingEMI");
+const eligibilityRate = document.getElementById("eligibilityRate");
+const eligibilityTenure = document.getElementById("eligibilityTenure");
+const eligibleAmount = document.getElementById("eligibleAmount");
+
+function calculateEligibility() {
+
+    let income = parseFloat(monthlyIncome.value) || 0;
+    let emiExisting = parseFloat(existingEMI.value) || 0;
+    let rate = parseFloat(eligibilityRate.value) || 0;
+    let tenure = parseFloat(eligibilityTenure.value) || 0;
+
+    if (income <= 0 || rate <= 0 || tenure <= 0) {
+        eligibleAmount.innerText = "₹ 0";
+        return;
+    }
+
+    let maxEMI = (income * 0.60) - emiExisting;
+
+    if (maxEMI <= 0) {
+        eligibleAmount.innerText = "₹ 0";
+        return;
+    }
+
+    let R = rate / 12 / 100;
+    let N = tenure * 12;
+
+    let loanAmount = (maxEMI * (Math.pow(1 + R, N) - 1)) / (R * Math.pow(1 + R, N));
+
+    eligibleAmount.innerText = "₹ " + Math.round(loanAmount).toLocaleString();
+}
+
+monthlyIncome.addEventListener("input", calculateEligibility);
+existingEMI.addEventListener("input", calculateEligibility);
+eligibilityRate.addEventListener("input", calculateEligibility);
+eligibilityTenure.addEventListener("input", calculateEligibility);
+    
 });
