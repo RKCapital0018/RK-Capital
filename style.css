@@ -225,33 +225,49 @@ input[type="range"] {
   color: #0a1f44;
   margin-top: 5px;
 }
+/* ===== PREMIUM TRUST SECTION ===== */
+
 .trust-section {
-  padding: 60px 20px;
-  background: #f5f7ff;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 .trust-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  text-align: center;
+  gap: 40px;
 }
 
 .trust-box {
-  margin: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 50px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  min-width: 220px;
+}
+
+.trust-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border: 1px solid #d4af37;
 }
 
 .trust-box h3 {
-  font-size: 32px;
-  color: #0a1f44;
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(to right, #d4af37, #facc15);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .trust-box p {
-  margin-top: 8px;
-}
-
-canvas {
-  margin-top: 30px;
+  margin-top: 12px;
+  color: #cbd5e1;
+  font-size: 16px;
 }
