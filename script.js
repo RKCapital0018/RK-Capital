@@ -1,92 +1,90 @@
-const loanAmount = document.getElementById("loanAmount");
-const interestRate = document.getElementById("interestRate");
-const loanTenure = document.getElementById("loanTenure");
+document.addEventListener("DOMContentLoaded", function () {
 
-const emiText = document.getElementById("emi");
-const totalInterestText = document.getElementById("totalInterest");
-const totalPaymentText = document.getElementById("totalPayment");
+    // EMI CALCULATOR
 
-const loanAmountValue = document.getElementById("loanAmountValue");
-const interestRateValue = document.getElementById("interestRateValue");
-const loanTenureValue = document.getElementById("loanTenureValue");
+    const loanAmount = document.getElementById("loanAmount");
+    const interestRate = document.getElementById("interestRate");
+    const loanTenure = document.getElementById("loanTenure");
 
-let emiChart;
+    const emiText = document.getElementById("emi");
+    const totalInterestText = document.getElementById("totalInterest");
+    const totalPaymentText = document.getElementById("totalPayment");
 
-function calculateEMI() {
-    let P = parseFloat(loanAmount.value);
-    let R = parseFloat(interestRate.value) / 12 / 100;
-    let N = parseFloat(loanTenure.value) * 12;
+    const loanAmountValue = document.getElementById("loanAmountValue");
+    const interestRateValue = document.getElementById("interestRateValue");
+    const loanTenureValue = document.getElementById("loanTenureValue");
 
-    let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
-    let totalPayment = EMI * N;
-    let totalInterest = totalPayment - P;
+    let emiChart;
 
-    emiText.innerText = "₹ " + EMI.toFixed(0);
-    totalInterestText.innerText = "₹ " + totalInterest.toFixed(0);
-    totalPaymentText.innerText = "₹ " + totalPayment.toFixed(0);
+    function calculateEMI() {
+        let P = parseFloat(loanAmount.value);
+        let R = parseFloat(interestRate.value) / 12 / 100;
+        let N = parseFloat(loanTenure.value) * 12;
 
-    updateChart(P, totalInterest);
-}
+        let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+        let totalPayment = EMI * N;
+        let totalInterest = totalPayment - P;
 
-function updateChart(principal, interest) {
-    const ctx = document.getElementById("emiChart").getContext("2d");
+        emiText.innerText = "₹ " + EMI.toFixed(0);
+        totalInterestText.innerText = "₹ " + totalInterest.toFixed(0);
+        totalPaymentText.innerText = "₹ " + totalPayment.toFixed(0);
 
-    if (emiChart) {
-        emiChart.destroy();
+        updateChart(P, totalInterest);
     }
 
-    emiChart = new Chart(ctx, {
-        type: "pie",
-        data: {
-            labels: ["Principal", "Interest"],
-            datasets: [{
-                data: [principal, interest],
-                backgroundColor: ["#0a1f44", "#d4af37"]
-            }]
-        },
-        options: {
-            responsive: true
+    function updateChart(principal, interest) {
+        const ctx = document.getElementById("emiChart").getContext("2d");
+
+        if (emiChart) {
+            emiChart.destroy();
         }
-    });
-}
 
-function updateValues() {
-    loanAmountValue.innerText = loanAmount.value;
-    interestRateValue.innerText = interestRate.value;
-    loanTenureValue.innerText = loanTenure.value;
-    calculateEMI();
-}
+        emiChart = new Chart(ctx, {
+            type: "pie",
+            data: {
+                labels: ["Principal", "Interest"],
+                datasets: [{
+                    data: [principal, interest],
+                    backgroundColor: ["#0a1f44", "#d4af37"]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    }
 
-loanAmount.addEventListener("input", updateValues);
-interestRate.addEventListener("input", updateValues);
-loanTenure.addEventListener("input", updateValues);
+    function updateValues() {
+        loanAmountValue.innerText = loanAmount.value;
+        interestRateValue.innerText = interestRate.value;
+        loanTenureValue.innerText = loanTenure.value;
+        calculateEMI();
+    }
 
-updateValues();
+    loanAmount.addEventListener("input", updateValues);
+    interestRate.addEventListener("input", updateValues);
+    loanTenure.addEventListener("input", updateValues);
 
-// TRUST COUNTER ANIMATION - FINAL FIXED VERSION
+    updateValues();
 
-document.addEventListener("DOMContentLoaded", function () {
+    // TRUST COUNTER (FINAL WORKING VERSION)
 
     const section = document.querySelector(".trust-section");
     const counters = document.querySelectorAll(".counter");
 
-    if (!section || counters.length === 0) return;
+    let started = false;
 
-    let counterStarted = false;
-
-    const startCounter = () => {
-        if (counterStarted) return;
-        counterStarted = true;
+    function startCounter() {
+        if (started) return;
+        started = true;
 
         counters.forEach(counter => {
             counter.innerText = "0";
-
             const target = +counter.getAttribute("data-target");
             const increment = target / 100;
 
             const updateCounter = () => {
                 const current = +counter.innerText;
-
                 if (current < target) {
                     counter.innerText = Math.ceil(current + increment);
                     setTimeout(updateCounter, 20);
@@ -97,10 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             updateCounter();
         });
-    };
+    }
 
     const observer = new IntersectionObserver(
-        (entries) => {
+        entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     startCounter();
@@ -112,17 +110,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(section);
 
-});
-// Run animation when section appears on screen
-window.addEventListener("scroll", function () {
-    const section = document.querySelector(".trust-section");
-
-    if (!section) return;
-
-    const sectionPosition = section.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight;
-
-    if (sectionPosition < screenPosition - 100) {
-        startCounterAnimation();
-    }
 });
