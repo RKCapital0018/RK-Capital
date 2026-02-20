@@ -182,5 +182,67 @@ toggleBtn.addEventListener("click", function () {
     }
 
 });
+
+// EMI PDF DOWNLOAD
+
+const downloadBtn = document.getElementById("downloadPdfBtn");
+
+downloadBtn.addEventListener("click", function () {
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    let P = parseFloat(loanAmount.value);
+    let annualRate = parseFloat(interestRate.value);
+    let tenureYears = parseFloat(loanTenure.value);
+
+    let R = annualRate / 12 / 100;
+    let N = tenureYears * 12;
+
+    let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+
+    let balance = P;
+
+    doc.setFontSize(16);
+    doc.text("RK Capital Financial Services", 20, 20);
+
+    doc.setFontSize(12);
+    doc.text("Loan Amount: ₹ " + P.toLocaleString(), 20, 30);
+    doc.text("Interest Rate: " + annualRate + "%", 20, 37);
+    doc.text("Tenure: " + tenureYears + " Years", 20, 44);
+    doc.text("Monthly EMI: ₹ " + Math.round(EMI).toLocaleString(), 20, 51);
+
+    let startY = 65;
+    doc.text("Month | EMI | Principal | Interest | Balance", 20, startY);
+
+    startY += 8;
+
+    for (let i = 1; i <= N; i++) {
+
+        let interest = balance * R;
+        let principal = EMI - interest;
+        balance -= principal;
+
+        if (startY > 280) {
+            doc.addPage();
+            startY = 20;
+        }
+
+        doc.text(
+            i + " | " +
+            Math.round(EMI) + " | " +
+            Math.round(principal) + " | " +
+            Math.round(interest) + " | " +
+            Math.max(0, Math.round(balance)),
+            20,
+            startY
+        );
+
+        startY += 7;
+    }
+
+    doc.save("RK-Capital-EMI-Schedule.pdf");
+
+});
     
 });
