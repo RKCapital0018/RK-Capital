@@ -272,7 +272,36 @@ Apply for Loan
 </div>
 
 </section>
+<section class="eligibility">
 
+<h2>Loan Eligibility Checker</h2>
+
+<p>Check your estimated loan eligibility instantly</p>
+
+<input type="number" id="salary" placeholder="Monthly Salary (₹)">
+<input type="number" id="existingEMI" placeholder="Existing EMI (₹)">
+<input type="number" id="tenure" placeholder="Loan Tenure (Months)">
+
+<button onclick="checkEligibility()">Check Eligibility</button>
+
+<h3 id="eligibilityResult"></h3>
+
+</section>
+
+<section class="calculator">
+
+<h2>Loan EMI Calculator</h2>
+
+<input type="number" id="loanAmount" placeholder="Loan Amount (₹)">
+<input type="number" id="interestRate" placeholder="Interest Rate (%)">
+<input type="number" id="loanTenure" placeholder="Tenure (Months)">
+
+<button onclick="calculateEMI()">Calculate EMI</button>
+
+<h3 id="emiResult"></h3>
+
+</section>  
+  
 
 <section class="testimonials">
 
