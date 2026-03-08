@@ -473,8 +473,8 @@ margin-top:40px;
 .logo-track{
 display:flex;
 gap:60px;
-width:calc(250px * 8);
-animation:scrollLogos 25s linear infinite;
+width:max-content;
+animation:scrollLogos 50s linear infinite;
 align-items:center;
 }
 
@@ -496,7 +496,7 @@ transform:translateX(0);
 }
 
 100%{
-transform:translateX(-50%);
+transform:translateX(-100%);
 }
 
 }
