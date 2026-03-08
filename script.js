@@ -110,3 +110,28 @@ document.getElementById("emiResult").innerHTML=
 "Monthly EMI: ₹"+EMI.toFixed(2);
 
 }
+
+
+/* OPEN FORM */
+
+function openLoanForm(){
+document.getElementById("loanModal").style.display="flex";
+}
+
+/* CLOSE FORM */
+
+function closeLoanForm(){
+document.getElementById("loanModal").style.display="none";
+}
+
+/* FORM SUBMIT */
+
+document.getElementById("loanForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Thank you! Our team will contact you shortly.");
+
+document.getElementById("loanModal").style.display="none";
+
+});
