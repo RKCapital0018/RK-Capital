@@ -124,41 +124,14 @@ function closeLoanForm(){
 document.getElementById("loanModal").style.display="none";
 }
 
-/* FORM SUBMIT - SEND DATA TO GOOGLE SHEETS */
+/* FORM SUBMIT */
 
-document.getElementById("loanForm").addEventListener("submit", function(e){
+document.getElementById("loanForm").addEventListener("submit",function(e){
 
 e.preventDefault();
 
-let formData = {
-
-name: this[0].value,
-mobile: this[1].value,
-city: this[2].value,
-loanType: this[3].value,
-loanAmount: this[4].value,
-income: this[5].value
-
-};
-
-fetch("https://script.google.com/macros/s/AKfycbyV59pK-orfH4lSf3RNkiMt1lyy8Yeggz9aKq5klQzcEKlCstfCr0wjjsGDT5s7S9fh/exec"),{
-
-method:"POST",
-
-body:JSON.stringify(formData)
-
-})
-
-.then(res=>res.text())
-
-.then(data=>{
-
-alert("Application submitted successfully! Our team will contact you soon.");
+alert("Thank you! Our team will contact you shortly.");
 
 document.getElementById("loanModal").style.display="none";
 
 });
-
-});
-
-
