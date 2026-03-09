@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RK Capital Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f4f7fb;
+}
+
+.login-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+width:320px;
+text-align:center;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:5px;
+}
+
+.login-box button{
+width:100%;
+padding:12px;
+background:#2f6fed;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>RK Capital Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+let username=document.getElementById("username").value;
+let password=document.getElementById("password").value;
+
+/* Admin */
+
+if(username==="admin" && password==="admin123"){
+
+localStorage.setItem("role","admin");
+window.location.href="dashboard.html";
+
+}
+
+/* Employee */
+
+else if(username==="employee" && password==="emp123"){
+
+localStorage.setItem("role","employee");
+window.location.href="dashboard.html";
+
+}
+
+else{
+
+document.getElementById("error").innerText="Invalid login";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
