@@ -151,33 +151,43 @@ function login(){
 let username=document.getElementById("username").value;
 let password=document.getElementById("password").value;
 
-/* Admin */
+/* ADMIN LOGIN */
 
 if(username==="admin" && password==="kautuk123"){
 
 localStorage.setItem("role","admin");
+localStorage.setItem("name","Admin");
+
 window.location.href="dashboard.html";
 
 }
 
-/* Employee */
+/* EMPLOYEE 1 */
 
-else if(username==="employee" && password==="emp123"){
+else if(username==="pavan" && password==="pavan123"){
 
 localStorage.setItem("role","employee");
+localStorage.setItem("name","Pavan");
+
+window.location.href="dashboard.html";
+
+}
+
+/* EMPLOYEE 2 */
+
+else if(username==="monukumar" && password==="monu123"){
+
+localStorage.setItem("role","employee");
+localStorage.setItem("name","monukumar");
+
 window.location.href="dashboard.html";
 
 }
 
 else{
 
-document.getElementById("error").innerText="Invalid login";
+alert("Invalid Login Credentials");
 
 }
 
 }
-
-</script>
-
-</body>
-</html>
