@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,6 +62,7 @@ Helping individuals and businesses secure the best financial solutions.
 <button onclick="openLoanForm()" class="primary-btn">
 Apply for Loan
 </button>
+
 <div class="dashboard-visual">
 
 <div class="dash-card">
@@ -324,77 +326,33 @@ Apply for Loan
 </section>
 <section class="eligibility">
 
-<div class="calculator-card">
-
 <h2>Loan Eligibility Checker</h2>
 
-<p class="calc-desc">Check your estimated loan eligibility instantly.</p>
+<p>Check your estimated loan eligibility instantly</p>
 
-<div class="calc-inputs">
+<input type="number" id="salary" placeholder="Monthly Salary (₹)">
+<input type="number" id="existingEMI" placeholder="Existing EMI (₹)">
+<input type="number" id="tenure" placeholder="Loan Tenure (Months)">
 
-<div class="input-group">
-<label>Monthly Salary</label>
-<input type="number" id="salary" placeholder="₹ Enter Salary">
-</div>
+<button onclick="checkEligibility()">Check Eligibility</button>
 
-<div class="input-group">
-<label>Existing EMI</label>
-<input type="number" id="existingEMI" placeholder="₹ Current EMI">
-</div>
-
-<div class="input-group">
-<label>Loan Tenure</label>
-<input type="number" id="tenure" placeholder="Months">
-</div>
-
-</div>
-
-<button class="calc-btn" onclick="checkEligibility()">Check Eligibility</button>
-
-<div class="result-box">
 <h3 id="eligibilityResult"></h3>
-</div>
-
-</div>
 
 </section>
 
 <section class="calculator">
 
-<div class="calculator-card">
-
 <h2>Loan EMI Calculator</h2>
 
-<p class="calc-desc">Estimate your monthly loan EMI instantly.</p>
+<input type="number" id="loanAmount" placeholder="Loan Amount (₹)">
+<input type="number" id="interestRate" placeholder="Interest Rate (%)">
+<input type="number" id="loanTenure" placeholder="Tenure (Months)">
 
-<div class="calc-inputs">
+<button onclick="calculateEMI()">Calculate EMI</button>
 
-<div class="input-group">
-<label>Loan Amount</label>
-<input type="number" id="loanAmount" placeholder="₹ Enter Loan Amount">
-</div>
-
-<div class="input-group">
-<label>Interest Rate</label>
-<input type="number" id="interestRate" placeholder="% Annual Interest">
-</div>
-
-<div class="input-group">
-<label>Loan Tenure</label>
-<input type="number" id="loanTenure" placeholder="Months">
-</div>
-
-</div>
-
-<button class="calc-btn" onclick="calculateEMI()">Calculate EMI</button>
-
-<div class="result-box">
 <h3 id="emiResult"></h3>
-</div>
 
-</div>
-
-</section>
+</section>  
   
 
 <section class="testimonials">
@@ -443,11 +401,10 @@ Amravati | Akola | Washim | Yavatmal | Buldhana | Wardha | Nagpur
 
 <h2>Contact Us</h2>
 
-<p>Email: rkcapitalfs@gmail.com</p>
+<p>Email: rkcapitalfinancialservices@gmail.com</p>
 
 <p>Phone: +91 93258 54165</p>
-<p>Phone: +91 90286 36194</p>
-<p>Phone: +91 93098 62183</p> 
+
 </section>
 
 
@@ -495,16 +452,9 @@ Amravati | Akola | Washim | Yavatmal | Buldhana | Wardha | Nagpur
 
 </select>
 
+<input type="number" name="loanAmount" placeholder="Loan Amount (₹)" required>
+
 <input type="number" name="income" placeholder="Monthly Income (₹)" required>
-
-<div style="margin-top:15px; font-size:13px; text-align:left;">
-<input type="checkbox" id="consentCheck" required>
-
-<label for="consentCheck">
-I authorize <b>RK Capital Financial Services</b> to process my loan application
-and share my details with partner banks/NBFCs for loan processing.
-</label>
-</div>
 
 <button type="submit">Submit Application</button>
 
