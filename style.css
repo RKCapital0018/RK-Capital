@@ -692,6 +692,261 @@ font-weight:600;
 font-size:18px;
 }
 
+
+/* ===================================== */
+/* RK CAPITAL PREMIUM FINTECH UI UPGRADE */
+/* ===================================== */
+
+
+/* PREMIUM BODY BACKGROUND */
+
+body{
+
+background:
+radial-gradient(circle at 15% 20%, rgba(47,111,237,0.18), transparent 30%),
+radial-gradient(circle at 85% 80%, rgba(0,194,168,0.18), transparent 30%),
+linear-gradient(180deg,#f6f9ff,#eef3ff);
+
+}
+
+
+/* PREMIUM GLASS HEADER */
+
+header{
+
+background:rgba(255,255,255,0.85);
+
+backdrop-filter:blur(14px);
+
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+
+}
+
+
+/* PREMIUM BUTTONS */
+
+.primary-btn{
+
+background:linear-gradient(135deg,#2f6fed,#00c2a8);
+
+color:white;
+
+box-shadow:0 12px 30px rgba(0,0,0,0.2);
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-5px) scale(1.02);
+
+box-shadow:0 25px 50px rgba(0,0,0,0.25);
+
+}
+
+
+/* PREMIUM SERVICE CARDS */
+
+.card{
+
+background:rgba(255,255,255,0.75);
+
+backdrop-filter:blur(14px);
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,0.4);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.08),
+0 1px 0 rgba(255,255,255,0.6) inset;
+
+}
+
+
+/* PREMIUM CARD HOVER */
+
+.card:hover{
+
+transform:translateY(-14px) scale(1.03);
+
+box-shadow:0 30px 70px rgba(0,0,0,0.18);
+
+}
+
+
+/* PREMIUM HERO GLOW */
+
+.hero{
+
+background:
+radial-gradient(circle at 30% 30%, rgba(47,111,237,0.35), transparent 40%),
+radial-gradient(circle at 80% 60%, rgba(0,194,168,0.35), transparent 40%),
+linear-gradient(135deg,#0b1f3a,#1e3f75,#2f6fed);
+
+background-size:200% 200%;
+
+animation:heroGradientMove 12s ease infinite;
+
+}
+
+
+/* HERO GRADIENT ANIMATION */
+
+@keyframes heroGradientMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+
+/* PREMIUM SECTION DIVIDER */
+
+section h2::after{
+
+content:"";
+
+display:block;
+
+width:70px;
+height:3px;
+
+margin:14px auto 0 auto;
+
+background:linear-gradient(90deg,#2f6fed,#00c2a8);
+
+border-radius:3px;
+
+}
+
+
+/* PREMIUM STATS CARDS */
+
+.stat{
+
+border-radius:18px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.08),
+0 2px 6px rgba(0,0,0,0.05);
+
+}
+
+
+/* PREMIUM DASHBOARD CARDS */
+
+.dash-card{
+
+background:rgba(255,255,255,0.18);
+
+backdrop-filter:blur(14px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+}
+
+
+/* PREMIUM CALCULATOR */
+
+.calculator-card{
+
+background:rgba(255,255,255,0.95);
+
+border-radius:22px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+
+}
+
+
+/* PREMIUM RESULT BOX */
+
+.result-box{
+
+background:linear-gradient(135deg,#f5f8ff,#eef3ff);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+
+/* RARE FINTECH LIGHT EFFECT */
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+top:-250px;
+right:-250px;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(circle,#00c2a8 0%,transparent 70%);
+
+opacity:0.18;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+/* SUBTLE MICRO INTERACTION */
+
+nav a{
+
+transition:0.3s;
+
+}
+
+nav a:hover{
+
+color:#2f6fed;
+
+}
+
+
+/* PREMIUM IMAGE HOVER */
+
+.partner-logos img,
+.logo-track img{
+
+transition:0.35s;
+
+}
+
+.partner-logos img:hover,
+.logo-track img:hover{
+
+transform:scale(1.15);
+
+}
+
+
+/* EXTRA DEPTH SHADOW */
+
+.stat,
+.card,
+.calculator-card{
+
+transition:0.35s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+}
 /* ============================= */
 /* MOBILE RESPONSIVE OPTIMIZATION */
 /* ============================= */
