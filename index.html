@@ -324,33 +324,77 @@ Apply for Loan
 </section>
 <section class="eligibility">
 
+<div class="calculator-card">
+
 <h2>Loan Eligibility Checker</h2>
 
-<p>Check your estimated loan eligibility instantly</p>
+<p class="calc-desc">Check your estimated loan eligibility instantly.</p>
 
-<input type="number" id="salary" placeholder="Monthly Salary (₹)">
-<input type="number" id="existingEMI" placeholder="Existing EMI (₹)">
-<input type="number" id="tenure" placeholder="Loan Tenure (Months)">
+<div class="calc-inputs">
 
-<button onclick="checkEligibility()">Check Eligibility</button>
+<div class="input-group">
+<label>Monthly Salary</label>
+<input type="number" id="salary" placeholder="₹ Enter Salary">
+</div>
 
+<div class="input-group">
+<label>Existing EMI</label>
+<input type="number" id="existingEMI" placeholder="₹ Current EMI">
+</div>
+
+<div class="input-group">
+<label>Loan Tenure</label>
+<input type="number" id="tenure" placeholder="Months">
+</div>
+
+</div>
+
+<button class="calc-btn" onclick="checkEligibility()">Check Eligibility</button>
+
+<div class="result-box">
 <h3 id="eligibilityResult"></h3>
+</div>
+
+</div>
 
 </section>
 
 <section class="calculator">
 
+<div class="calculator-card">
+
 <h2>Loan EMI Calculator</h2>
 
-<input type="number" id="loanAmount" placeholder="Loan Amount (₹)">
-<input type="number" id="interestRate" placeholder="Interest Rate (%)">
-<input type="number" id="loanTenure" placeholder="Tenure (Months)">
+<p class="calc-desc">Estimate your monthly loan EMI instantly.</p>
 
-<button onclick="calculateEMI()">Calculate EMI</button>
+<div class="calc-inputs">
 
+<div class="input-group">
+<label>Loan Amount</label>
+<input type="number" id="loanAmount" placeholder="₹ Enter Loan Amount">
+</div>
+
+<div class="input-group">
+<label>Interest Rate</label>
+<input type="number" id="interestRate" placeholder="% Annual Interest">
+</div>
+
+<div class="input-group">
+<label>Loan Tenure</label>
+<input type="number" id="loanTenure" placeholder="Months">
+</div>
+
+</div>
+
+<button class="calc-btn" onclick="calculateEMI()">Calculate EMI</button>
+
+<div class="result-box">
 <h3 id="emiResult"></h3>
+</div>
 
-</section>  
+</div>
+
+</section>
   
 
 <section class="testimonials">
