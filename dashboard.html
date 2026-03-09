@@ -162,24 +162,26 @@ src="https://docs.google.com/spreadsheets/d/1axji5a8szqGLk7X-nVnMpBaEF3n7I_Tv0-P
 let role=localStorage.getItem("role");
  /* WELCOME GREETING */
 
-let adminName = "Kautuk";
+let userName=localStorage.getItem("name");
 
-let hour = new Date().getHours();
-let greeting = "";
+let hour=new Date().getHours();
+let greeting="";
 
-if(hour < 12){
-greeting = "Good Morning";
+if(hour<12){
+greeting="Good Morning";
 }
-else if(hour < 18){
-greeting = "Good Afternoon";
+
+else if(hour<18){
+greeting="Good Afternoon";
 }
+
 else{
-greeting = "Good Evening";
+greeting="Good Evening";
 }
 
-document.getElementById("welcomeMessage").innerText =
-greeting + ", " + adminName + " 👋"; 
-
+document.getElementById("welcomeMessage").innerText=
+greeting+", "+userName+" 👋";
+  
 if(!role){
 window.location.href="login.html";
 }
