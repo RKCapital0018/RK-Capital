@@ -1,18 +1,5 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* ============================= */
-/* PREMIUM FINTECH COLOR SYSTEM */
-/* ============================= */
-
-:root{
-
---primary:#0b1f3a;
---accent:#2f6fed;
---premium:#00c2a8;
---softbg:#f6f9ff;
---cardbg:#ffffff;
-
-}
 
 *{
 margin:0;
@@ -22,35 +9,22 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-
-background:
-radial-gradient(circle at 10% 20%,rgba(47,111,237,0.15),transparent 30%),
-radial-gradient(circle at 90% 80%,rgba(0,194,168,0.15),transparent 30%),
-linear-gradient(180deg,#f6f9ff,#eef3ff);
-
+background:linear-gradient(180deg,#f6f9ff,#eef3ff);
 color:#1b2a4e;
-
 }
 
 /* HEADER */
 
 header{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 padding:18px 80px;
-
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(12px);
-
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
 z-index:100;
-
 }
 
 .logo{
@@ -91,26 +65,16 @@ width:100%;
 /* HERO */
 
 .hero{
-
 height:85vh;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 text-align:center;
 padding:60px;
-
 background:
-radial-gradient(circle at 30% 30%,rgba(47,111,237,0.35),transparent 40%),
-radial-gradient(circle at 80% 60%,rgba(0,194,168,0.35),transparent 40%),
-linear-gradient(135deg,#0b1f3a,#1e3f75,#2f6fed);
-
-background-size:200% 200%;
-animation:heroGradient 12s ease infinite;
-
+radial-gradient(circle at 20% 30%,#2f6fed22,transparent 40%),
+linear-gradient(135deg,#0b1f3a,#2f6fed);
 color:white;
-
 }
 
 .hero-content{
@@ -131,35 +95,21 @@ line-height:1.6;
 }
 
 .primary-btn{
-
-background:linear-gradient(135deg,#2f6fed,#00c2a8);
-
-color:white;
-
+background:white;
+color:#2f6fed;
 border:none;
-
 padding:16px 36px;
-
 font-size:16px;
-
 border-radius:40px;
-
 cursor:pointer;
-
 font-weight:600;
-
-box-shadow:0 12px 30px rgba(0,0,0,0.2);
-
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 transition:0.3s;
-
 }
 
 .primary-btn:hover{
-
-transform:translateY(-4px);
-
-box-shadow:0 20px 45px rgba(0,0,0,0.25);
-
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
 
 /* STATS */
@@ -207,23 +157,13 @@ gap:30px;
 }
 
 .card{
-
-background:rgba(255,255,255,0.75);
-
-backdrop-filter:blur(14px);
-
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
 padding:40px;
-
-border-radius:20px;
-
-border:1px solid rgba(255,255,255,0.4);
-
-box-shadow:
-0 10px 30px rgba(0,0,0,0.08),
-0 1px 0 rgba(255,255,255,0.6) inset;
-
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.3);
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
 transition:0.4s;
-
 }
 
 .card i{
@@ -369,13 +309,6 @@ animation:float 4s ease-in-out infinite;
 0%{transform:translateY(0)}
 50%{transform:translateY(-10px)}
 100%{transform:translateY(0)}
-}
-@keyframes heroGradient{
-
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-
 }
 
 /* PARTNERS */
@@ -758,46 +691,6 @@ background:#f5f8ff;
 font-weight:600;
 font-size:18px;
 }
-
-/* PREMIUM SECTION DIVIDER */
-
-section::before{
-
-content:"";
-
-display:block;
-
-width:80px;
-height:3px;
-
-margin:0 auto 40px auto;
-
-background:linear-gradient(90deg,#2f6fed,#00c2a8);
-
-border-radius:4px;
-
-}
-
-body::after{
-
-content:"";
-
-position:fixed;
-
-width:500px;
-height:500px;
-
-background:radial-gradient(circle,#00c2a8 0%,transparent 70%);
-
-top:-200px;
-right:-200px;
-
-opacity:0.15;
-
-pointer-events:none;
-
-}
-
 
 /* ============================= */
 /* MOBILE RESPONSIVE OPTIMIZATION */
