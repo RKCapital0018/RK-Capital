@@ -218,3 +218,10 @@ window.location.href =
 },500);
 
 }
+function toggleMenu(){
+
+let menu = document.getElementById("navMenu");
+
+menu.classList.toggle("active");
+
+}
