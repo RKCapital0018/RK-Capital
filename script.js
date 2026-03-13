@@ -1,4 +1,5 @@
 
+
 function applyLoan(){
 alert("Loan Application feature coming soon!");
 }
@@ -215,20 +216,5 @@ window.location.href =
 "mailto:rkcapitalfs@gmail.com?subject=Loan Application&body="+encoded;
 
 },500);
-
-}
-function toggleMenu(){
-
-let menu=document.getElementById("navMenu");
-
-if(menu.style.display==="block"){
-
-menu.style.display="none";
-
-}else{
-
-menu.style.display="block";
-
-}
 
 }
