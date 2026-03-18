@@ -17,22 +17,64 @@ color:#1b2a4e;
 /* HEADER */
 
 header{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 80px;
-background:white;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+padding:12px 80px;
+
+background:#0b1f3a;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
 position:sticky;
 top:0;
 z-index:100;
+
+height:73px;
+
 }
 
 .logo{
-font-size:22px;
+
+display:flex;
+align-items:center;
+height:100%;
+
+}
+.company-name{
+
+font-size:24px;
+
 font-weight:700;
-color:#0b1f3a;
-letter-spacing:0.5px;
+
+margin-left:12px;
+
+background:linear-gradient(90deg,#ffffff,#00c2a8);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.logo img{
+
+height:77px;
+
+width:auto;
+
+object-fit:contain;
+
+}
+
+.logo img{
+
+transform:scale(1.1);
+
+}
+
 }
 
 nav ul{
@@ -44,7 +86,7 @@ list-style:none;
 nav a{
 text-decoration:none;
 font-weight:500;
-color:#333;
+color:white;
 position:relative;
 }
 
@@ -55,7 +97,7 @@ left:0;
 bottom:-6px;
 width:0;
 height:2px;
-background:#2f6fed;
+background:#00c2a8;
 transition:0.3s;
 }
 
@@ -877,70 +919,97 @@ color:#2f6fed;
 
 }
 
-/* HAMBURGER BUTTON */
+/* HAMBURGER MENU */
 
 .menu-toggle{
-display:none;
+
 font-size:26px;
+
 color:white;
+
 cursor:pointer;
+
 }
 
-/* MOBILE NAVIGATION */
+/* NAV MENU */
 
-@media (max-width:768px){
+#navMenu{
 
-/* SHOW HAMBURGER */
-
-.menu-toggle{
-display:block;
-}
-
-/* HIDE DESKTOP MENU */
-
-nav ul{
-display:none;
-}
-
-/* HIDE DESKTOP LOGIN BUTTON */
-
-.desktop-login{
-display:none;
-}
-
-/* MOBILE DROPDOWN MENU */
-
-#navMenu.active ul{
-display:block;
 position:absolute;
+
 top:70px;
+
 right:20px;
+
 background:#0b1f3a;
-width:220px;
+
 border-radius:10px;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
-padding:10px 0;
+
+display:none;
+
+width:220px;
+
+}
+
+/* MENU LIST */
+
+#navMenu ul{
+
+list-style:none;
+
+padding:15px;
+
 }
 
 /* MENU ITEMS */
 
 #navMenu ul li{
-list-style:none;
+
+padding:12px 10px;
+
+border-bottom:1px solid rgba(255,255,255,0.1);
+
 }
 
+/* LINKS */
+
 #navMenu ul li a{
-display:block;
-padding:12px 18px;
+
 color:white;
+
 text-decoration:none;
+
 font-weight:500;
+
+display:block;
+
 }
 
 /* HOVER EFFECT */
 
-#navMenu ul li a:hover{
+#navMenu ul li:hover{
+
 background:#2f6fed;
+
+border-radius:6px;
+
 }
+
+/* COMPANY NAME NEXT TO LOGO */
+
+.company-name{
+
+font-size:24px;
+
+font-weight:700;
+
+color:#ffffff;
+
+margin-left:12px;
+
+letter-spacing:0.5px;
 
 }
 
@@ -952,6 +1021,76 @@ background:#2f6fed;
 
 /* HEADER */
 
+/* MOBILE HEADER FIX */
+
+header{
+
+padding:10px 15px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+height:65px;
+
+}
+
+/* LOGO AREA */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+}
+
+/* LOGO IMAGE */
+
+.logo img{
+
+height:45px;
+
+width:auto;
+
+}
+
+/* COMPANY NAME */
+
+.company-name{
+
+font-size:16px;
+
+font-weight:700;
+
+margin-left:8px;
+
+white-space:nowrap;
+
+}
+
+.company-name{
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+max-width:160px;
+
+}
+  
+/* HAMBURGER ICON */
+
+.menu-toggle{
+
+font-size:24px;
+
+cursor:pointer;
+
+}
+  
 header{
 padding:15px 20px;
 flex-direction:column;
@@ -959,68 +1098,6 @@ gap:10px;
 text-align:center;
 }
 
-/* MOBILE HEADER FIX */
-
-@media (max-width:768px){
-
-/* hide desktop navigation */
-
-nav ul{
-display:none;
-}
-
-/* hide desktop login button */
-
-.desktop-login{
-display:none;
-}
-
-/* show hamburger */
-
-.menu-toggle{
-display:block;
-font-size:26px;
-cursor:pointer;
-}
-
-/* dropdown menu */
-
-#navMenu.active ul{
-display:flex;
-flex-direction:column;
-position:absolute;
-top:70px;
-right:10px;
-background:#0b1f3a;
-width:220px;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
-padding:10px 0;
-}
-
-/* menu items */
-
-#navMenu ul li{
-list-style:none;
-text-align:left;
-}
-
-#navMenu ul li a{
-display:block;
-padding:12px 18px;
-color:white;
-text-decoration:none;
-font-weight:500;
-}
-
-/* hover */
-
-#navMenu ul li a:hover{
-background:#2f6fed;
-}
-
-}
-  
 nav ul{
 gap:20px;
 flex-wrap:wrap;
