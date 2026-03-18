@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,29 +23,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <header>
 
 <div class="logo">
-<img src="images/rk-capital-logo.png" alt="RK Capital Logo">
-<span class="company-name">RK Capital</span>
+RK Capital Financial Services
 </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-<i class="fa-solid fa-bars"></i>
-</div>
-
-<nav id="navMenu">
-
+<nav>
 <ul>
 
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#contact">Contact</a></li>
-<li><a href="login.html">Employee/Admin Login</a></li>
 
 </ul>
-
 </nav>
+<a href="login.html" class="primary-btn">Admin / Employee Login</a>
 
 </header>
+
+
 <section class="hero" id="home">
 
 <div class="fintech-bg">
@@ -330,78 +324,35 @@ Apply for Loan
 </div>
 
 </section>
-
-  <section class="eligibility">
-
-<div class="calculator-card">
+<section class="eligibility">
 
 <h2>Loan Eligibility Checker</h2>
-<p class="calc-desc">Check how much loan you may qualify for</p>
 
-<div class="calc-inputs">
+<p>Check your estimated loan eligibility instantly</p>
 
-<div class="input-group">
-<label>Monthly Salary</label>
-<input type="number" id="salary" placeholder="Enter monthly salary">
-</div>
+<input type="number" id="salary" placeholder="Monthly Salary (₹)">
+<input type="number" id="existingEMI" placeholder="Existing EMI (₹)">
+<input type="number" id="tenure" placeholder="Loan Tenure (Months)">
 
-<div class="input-group">
-<label>Existing EMI</label>
-<input type="number" id="existingEMI" placeholder="Current EMI">
-</div>
+<button onclick="checkEligibility()">Check Eligibility</button>
 
-<div class="input-group">
-<label>Loan Tenure (Months)</label>
-<input type="number" id="tenure" placeholder="Loan duration">
-</div>
-
-</div>
-
-<button class="calc-btn" onclick="checkEligibility()">Check Eligibility</button>
-
-<div class="result-box">
 <h3 id="eligibilityResult"></h3>
-</div>
-
-</div>
 
 </section>
 
 <section class="calculator">
 
-<div class="calculator-card">
-
 <h2>Loan EMI Calculator</h2>
-<p class="calc-desc">Estimate your monthly EMI instantly</p>
 
-<div class="calc-inputs">
+<input type="number" id="loanAmount" placeholder="Loan Amount (₹)">
+<input type="number" id="interestRate" placeholder="Interest Rate (%)">
+<input type="number" id="loanTenure" placeholder="Tenure (Months)">
 
-<div class="input-group">
-<label>Loan Amount</label>
-<input type="number" id="loanAmount" placeholder="Enter loan amount">
-</div>
+<button onclick="calculateEMI()">Calculate EMI</button>
 
-<div class="input-group">
-<label>Interest Rate (%)</label>
-<input type="number" id="interestRate" placeholder="Annual interest rate">
-</div>
-
-<div class="input-group">
-<label>Loan Tenure (Months)</label>
-<input type="number" id="loanTenure" placeholder="Loan duration">
-</div>
-
-</div>
-
-<button class="calc-btn" onclick="calculateEMI()">Calculate EMI</button>
-
-<div class="result-box">
 <h3 id="emiResult"></h3>
-</div>
 
-</div>
-
-</section>
+</section>  
   
 
 <section class="testimonials">
