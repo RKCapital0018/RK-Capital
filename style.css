@@ -692,68 +692,6 @@ font-weight:600;
 font-size:18px;
 }
 
-/* ===================================== */
-/* FORCE VERTICAL PREMIUM CALCULATOR FIX */
-/* ===================================== */
-
-/* SECTION CENTER FIX */
-
-.calculator,
-.eligibility{
-
-display:flex !important;
-justify-content:center !important;
-align-items:center !important;
-
-padding:120px 20px;
-
-}
-
-
-/* FORCE CARD WIDTH (MAIN FIX) */
-
-.calculator-card{
-
-width:90% !important;
-max-width:380px !important;   /* 👈 THIS FIXES HORIZONTAL ISSUE */
-
-margin:auto;
-
-}
-
-
-/* ENSURE INPUT STACK */
-
-.calc-inputs{
-
-display:flex !important;
-flex-direction:column !important;
-
-}
-
-
-/* CENTER EVERYTHING */
-
-.calculator-card{
-
-text-align:center;
-
-}
-
-
-/* BUTTON FULL WIDTH */
-
-.calc-btn{
-width:100%;
-}
-
-
-/* RESULT FULL WIDTH */
-
-.result-box{
-width:100%;
-}
-
 /* ============================= */
 /* MOBILE RESPONSIVE OPTIMIZATION */
 /* ============================= */
