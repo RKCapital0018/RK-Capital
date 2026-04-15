@@ -12,8 +12,18 @@ document.querySelectorAll(".card, .product, .hero-text").forEach(el => {
 });
 let cart = [];
 
-function openVeg() {
-  document.getElementById("vegSection").style.display = "flex";
+function openVeg(){
+  const vegSection = document.getElementById("vegGrid");
+
+  if(vegSection){
+    vegSection.style.display = "block";
+
+    vegSection.scrollIntoView({
+      behavior: "smooth"
+    });
+  } else {
+    console.log("vegGrid not found");
+  }
 }
 
 function closeVeg() {
