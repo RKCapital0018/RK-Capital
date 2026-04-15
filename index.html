@@ -74,7 +74,7 @@
 
     <div class="grid">
 
-      <div class="catalog-item">
+     <div class="catalog-item" onclick="openVeg()">
         <h3>🥬 Vegetables Pack</h3>
         <p>Potato, Onion, Tomato, Green Veggies</p>
         <span>₹150 - ₹300</span>
@@ -163,7 +163,7 @@
           <li>✔ 2 person quantity</li>
           <li>✔ Morning delivery</li>
         </ul>
-        <a href="https://wa.me/91XXXXXXXXXX" class="btn primary">Select Plan</a>
+        <a href="https://wa.me/919730572143" class="btn primary">Select Plan</a>
       </div>
 
       <div class="plan highlight">
@@ -174,7 +174,7 @@
           <li>✔ 4–5 person quantity</li>
           <li>✔ Priority delivery</li>
         </ul>
-        <a href="https://wa.me/91XXXXXXXXXX" class="btn primary">Select Plan</a>
+        <a href="https://wa.me/919730572143" class="btn primary">Select Plan</a>
       </div>
 
       <div class="plan">
@@ -203,5 +203,33 @@
 </footer>
 
 <script src="script.js"></script>
+
+ <section id="vegSection" class="veg-section">
+  <div class="veg-container">
+
+    <h2>Select Vegetables</h2>
+
+    <div class="veg-item">
+      <span>Potato (₹20/kg)</span>
+      <input type="number" min="0" value="0" id="potato">
+      <button onclick="addToCart('Potato', 20, 'potato')">Add</button>
+    </div>
+
+    <div class="veg-item">
+      <span>Onion (₹25/kg)</span>
+      <input type="number" min="0" value="0" id="onion">
+      <button onclick="addToCart('Onion', 25, 'onion')">Add</button>
+    </div>
+
+    <div class="veg-item">
+      <span>Tomato (₹30/kg)</span>
+      <input type="number" min="0" value="0" id="tomato">
+      <button onclick="addToCart('Tomato', 30, 'tomato')">Add</button>
+    </div>
+
+    <button class="close-btn" onclick="closeVeg()">Close</button>
+
+  </div>
+</section> 
 </body>
 </html>
