@@ -35,3 +35,42 @@ function addToCart(name, price, id) {
     alert("Please select quantity");
   }
 }
+let cart = [];
+
+// Open vegetable section
+function openVeg(){
+  document.getElementById("vegGrid").style.display = "block";
+
+  window.scrollTo({
+    top: document.getElementById("vegGrid").offsetTop,
+    behavior: "smooth"
+  });
+}
+
+// Add to cart
+function addToCart(name, price, id){
+  let qty = document.getElementById(id).value;
+
+  if(qty > 0){
+    cart.push({
+      name: name,
+      price: price,
+      qty: qty
+    });
+
+    updateCart();
+  } else {
+    alert("Please select quantity");
+  }
+}
+
+// Update cart total
+function updateCart(){
+  let total = 0;
+
+  cart.forEach(item => {
+    total += item.price * item.qty;
+  });
+
+  document.getElementById("cartTotal").innerText = "₹" + total;
+}
