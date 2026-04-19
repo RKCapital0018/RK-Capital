@@ -443,6 +443,11 @@ footer {
   margin: 10px 0;
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
 /* MOBILE */
 @media(max-width:768px){
   .hero h1 {
@@ -472,5 +477,10 @@ footer {
   .veg-right {
     width: 100%;
     justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 30px;
   }
 }
