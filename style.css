@@ -444,9 +444,10 @@ footer {
 }
 
 .logo img {
-  height: 35px;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
-
 /* MOBILE */
 @media(max-width:768px){
   .hero h1 {
@@ -481,5 +482,10 @@ footer {
 @media (max-width: 768px) {
   .logo img {
     height: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 28px;
   }
 }
