@@ -394,6 +394,55 @@ footer {
   font-weight: bold;
 }
 
+/* SEARCH */
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 80px 0;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.testimonial {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CART UI */
+.cart-page {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background: white;
+  transition: 0.4s;
+  z-index: 999;
+}
+
+.cart-page.active {
+  right: 0;
+}
+
+.cart-container {
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
 /* MOBILE */
 @media(max-width:768px){
   .hero h1 {
