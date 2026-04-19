@@ -443,11 +443,20 @@ footer {
   margin: 10px 0;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
   height: 40px;
   width: auto;
-  object-fit: contain;
+  max-height: 40px;
 }
+.navbar img {
+  max-height: 45px;
+}
+
 /* MOBILE */
 @media(max-width:768px){
   .hero h1 {
@@ -479,13 +488,9 @@ footer {
     justify-content: space-between;
   }
 }
+
 @media (max-width: 768px) {
   .logo img {
     height: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .logo img {
-    height: 28px;
   }
 }
