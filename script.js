@@ -57,3 +57,17 @@ function searchProducts(val){
   });
 }
 
+const fadeElements = document.querySelectorAll(".product-card, .category, .testimonial");
+
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+fadeElements.forEach(el => {
+  el.classList.add("fade-in");
+  fadeObserver.observe(el);
+});
