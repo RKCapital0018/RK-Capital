@@ -449,12 +449,12 @@ footer {
 }
 
 .logo img {
-  height: 100px;
+  height: 125px;
   width: auto;
-  max-height: 100px;
+  max-height: 125px;
 }
 .navbar img {
-  max-height: 100px;
+  max-height: 125px;
 }
 
 /* MOBILE */
