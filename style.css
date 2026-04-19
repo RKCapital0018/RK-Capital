@@ -457,40 +457,45 @@ footer {
   max-height: 125px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-
 @media (max-width: 768px) {
 
-  .hero-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-img img {
-    margin-top: 20px;
-  }
-
-}
-@media (max-width: 500px) {
-  .veg-item {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
 
-  .veg-right {
+  .logo {
     width: 100%;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-}
 
-@media (max-width: 768px) {
   .logo img {
     height: 30px;
+  }
+
+  .navbar nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cart-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
