@@ -457,6 +457,39 @@ footer {
   max-height: 125px;
 }
 
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    margin-top: 20px;
+  }
+
+}
+@media (max-width: 500px) {
+  .veg-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .veg-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+
 @media (max-width: 768px) {
 
   .navbar {
