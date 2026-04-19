@@ -351,18 +351,16 @@ footer {
 }
 
 .category {
-  background: #f1f5f9;
+  background: linear-gradient(145deg, #ffffff, #f0fdf4);
+  border-radius: 14px;
   padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  cursor: pointer;
   transition: 0.3s;
-  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .category:hover {
-  background: #e8f5e9;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #e8f5e9, #ffffff);
 }
 
 .product-grid {
@@ -495,6 +493,19 @@ footer {
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.cart-page {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-weight: 600;
 }
 
 /* MOBILE */
