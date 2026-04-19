@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FreshLoop - Fresh Delivered Daily</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshLoop - Fresh Delivered Daily</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">FreshLoop</div>
   <nav>
     <div class="cart-box">🛒 <span id="cartTotal">₹0</span></div>
+    <button onclick="toggleCart()" class="btn">View Cart</button>
     <a href="#how">How it Works</a>
     <a href="#plans">Plans</a>
-    <a href="#contact" class="btn">Order Now</a>
   </nav>
 </header>
+
+<!-- SEARCH -->
+<div class="container">
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts(this.value)">
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-flex">
-
     <div class="hero-text">
       <h1>Freshness Delivered Every Morning 🌿</h1>
-      <p>Start your day with farm-fresh vegetables and groceries delivered right to your doorstep.</p>
-
-      <div class="hero-buttons">
-        <a href="#plans" class="btn primary">View Plans</a>
-        <a href="#how" class="btn secondary">How it Works</a>
-      </div>
-
-      <div class="hero-trust">
-        <span>🌱 Fresh Daily</span>
-        <span>🚚 On-Time Delivery</span>
-        <span>❤️ Trusted by Families</span>
-      </div>
+      <p>Farm fresh groceries at your doorstep.</p>
     </div>
-
     <div class="hero-img">
       <img src="https://images.unsplash.com/photo-1542838132-92c53300491e">
     </div>
-
   </div>
 </section>
 
@@ -51,24 +41,21 @@
 <section class="categories">
   <div class="container">
     <h2>Shop by Category</h2>
-
     <div class="grid">
       <div class="category" onclick="openVeg()">🥬 Vegetables</div>
       <div class="category">🍎 Fruits</div>
       <div class="category">🥛 Dairy</div>
-      <div class="category">🍞 Grocery</div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCT GRID -->
+<!-- PRODUCTS -->
 <section id="vegGrid" class="product-grid" style="display:none;">
   <div class="container">
     <h2>Vegetables</h2>
-
     <div class="grid">
 
-      <div class="product-card">
+      <div class="product-card product-item">
         <img src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?w=300">
         <h3>Potato</h3>
         <p>₹20/kg</p>
@@ -76,7 +63,7 @@
         <button onclick="addToCart('Potato',20,'p1')">Add</button>
       </div>
 
-      <div class="product-card">
+      <div class="product-card product-item">
         <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=300">
         <h3>Onion</h3>
         <p>₹25/kg</p>
@@ -84,7 +71,7 @@
         <button onclick="addToCart('Onion',25,'p2')">Add</button>
       </div>
 
-      <div class="product-card">
+      <div class="product-card product-item">
         <img src="https://images.unsplash.com/photo-1607305387299-a3d9611cd469?w=300">
         <h3>Tomato</h3>
         <p>₹30/kg</p>
@@ -96,60 +83,28 @@
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features">
-  <div class="container grid">
-    <div class="feature">🌱 Fresh Quality</div>
-    <div class="feature">⏰ On-Time Delivery</div>
-    <div class="feature">💰 Smart Pricing</div>
-  </div>
-</section>
-
-<!-- HOW -->
-<section id="how" class="section">
+<!-- TESTIMONIALS -->
+<section class="testimonials">
   <div class="container">
-    <h2>How It Works</h2>
+    <h2>What Customers Say</h2>
     <div class="grid">
-      <div class="card">Order at Night</div>
-      <div class="card">We Pack Fresh</div>
-      <div class="card">Morning Delivery</div>
+      <div class="testimonial">"Very fresh & reliable!"</div>
+      <div class="testimonial">"Saves my daily time"</div>
+      <div class="testimonial">"Best service in city"</div>
     </div>
   </div>
 </section>
 
-<!-- PLANS -->
-<section id="plans" class="section light">
-  <div class="container">
-    <h2>Choose Your Plan</h2>
-
-    <div class="grid">
-      <div class="plan">
-        <h3>Basic</h3>
-        <p class="price">₹999</p>
-      </div>
-
-      <div class="plan highlight">
-        <h3>Family</h3>
-        <p class="price">₹1799</p>
-      </div>
-
-      <div class="plan">
-        <h3>Premium</h3>
-        <p class="price">₹2999</p>
-      </div>
-    </div>
+<!-- CART PANEL -->
+<section id="cartPage" class="cart-page">
+  <div class="cart-container">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <h3>Total: <span id="cartTotalPage">₹0</span></h3>
+    <button class="btn" onclick="checkout()">Checkout</button>
+    <button class="btn secondary" onclick="toggleCart()">Close</button>
   </div>
 </section>
-
-<!-- CTA -->
-<section id="contact" class="cta">
-  <h2>Make Your Mornings Easier</h2>
-  <a href="#" class="btn">Order Now</a>
-</section>
-
-<footer>
-  <p>© 2026 FreshLoop</p>
-</footer>
 
 <script src="script.js"></script>
 
