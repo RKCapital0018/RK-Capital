@@ -474,16 +474,6 @@ body {
   z-index: 1000;
 }
 
-/* 🌱 Logo Alignment Fix */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 38px;
-  width: auto;
-}
 
 /* 💎 Buttons Upgrade */
 .btn {
