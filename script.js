@@ -57,14 +57,19 @@ function searchProducts(val){
   });
 }
 
-const fadeElements = document.querySelectorAll(".product-card, .category, .testimonial");
+const items = document.querySelectorAll(".product-card, .category, .testimonial");
 
-const fadeObserver = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
       entry.target.classList.add("show");
     }
   });
+});
+
+items.forEach(el => {
+  el.classList.add("fade-in");
+  observer.observe(el);
 });
 
 fadeElements.forEach(el => {
