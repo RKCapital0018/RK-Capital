@@ -34,7 +34,7 @@ body {
   padding: 15px 30px;
   backdrop-filter: blur(10px);
   background: rgba(255,255,255,0.85);
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1000;
 }
