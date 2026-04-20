@@ -10,8 +10,18 @@ function openVeg(){
 function addToCart(name, price, id){
   let qty = document.getElementById(id).value;
 
+  // Get image from product card
+  let productCard = document.getElementById(id).closest(".product-card");
+  let img = productCard.querySelector("img").src;
+
   if(qty > 0){
-    cart.push({name, price, qty});
+    cart.push({
+      name,
+      price,
+      qty,
+      img
+    });
+
     updateCart();
   }
 }
@@ -26,8 +36,16 @@ function updateCart(){
 
     html += `
       <div class="cart-item">
-        <span>${item.name} (${item.qty})</span>
-        <span>₹${item.price * item.qty}</span>
+        <img src="${item.img}" class="cart-img">
+
+        <div class="cart-details">
+          <h4>${item.name}</h4>
+          <p>₹${item.price} × ${item.qty}</p>
+        </div>
+
+        <div class="cart-price">
+          ₹${item.price * item.qty}
+        </div>
       </div>
     `;
   });
@@ -44,7 +62,7 @@ function toggleCart(){
 
 // Checkout
 function checkout(){
-  alert("Order placed!");
+  alert("🎉 Order Confirmed!\nYour fresh groceries will arrive tomorrow morning.");
 }
 
 // Search
