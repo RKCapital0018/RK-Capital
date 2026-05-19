@@ -1,166 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreshLoop - Fresh Delivered Daily</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NOIRÉVA | Luxury Perfumes</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Luxury Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">
-    <img src="images/logo.png" alt="FreshLoop Logo">
-  </div>
-  <nav>
-    <div class="cart-box">🛒 <span id="cartTotal">₹0</span></div>
-    <button onclick="toggleCart()" class="btn">View Cart</button>
-    <a href="#how">How it Works</a>
-    <a href="#plans">Plans</a>
-  </nav>
-</header>
+    <!-- NAVBAR -->
 
-<!-- SEARCH -->
-<div class="container">
-  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts(this.value)">
-</div>
+    <header class="navbar">
+        <div class="logo">NOIRÉVA</div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-flex">
-    <div class="hero-text">
-      <h1>Freshness Delivered Every Morning 🌿</h1>
-      <p>Farm fresh groceries at your doorstep.</p>
-    </div>
-    <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e">
-    </div>
-  </div>
-</section>
-
-<!-- CATEGORY -->
-<section class="categories">
-  <div class="container">
-    <h2>Shop by Category</h2>
-    <div class="grid">
-      <div class="category" onclick="openVeg()">🥬 Vegetables</div>
-      <div class="category">🍎 Fruits</div>
-      <div class="category">🥛 Dairy</div>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="vegGrid" class="product-grid" style="display:none;">
-  <div class="container">
-    <h2>Vegetables</h2>
-    <div class="grid">
-
-      <div class="product-card product-item">
-        <img src="images/potato.png" alt="Potato">
-        <h3>Potato</h3>
-        <p>₹20/kg</p>
-        <input type="number" value="1" id="p1">
-        <button onclick="addToCart('Potato',20,'p1')">Add</button>
-      </div>
-
-      <div class="product-card product-item">
-       <img src="images/onion.png" alt="Onion">
-        <h3>Onion</h3>
-        <p>₹25/kg</p>
-        <input type="number" value="1" id="p2">
-        <button onclick="addToCart('Onion',25,'p2')">Add</button>
-      </div>
-
-      <div class="product-card product-item">
-        <img src="images/tomato.png" alt="Tomato">
-        <h3>Tomato</h3>
-        <p>₹30/kg</p>
-        <input type="number" value="1" id="p3">
-        <button onclick="addToCart('Tomato',30,'p3')">Add</button>
-      </div>
-
-      <div class="product-card product-item">
-        <img src="images/cabbage.png" alt="Cabbage">
-        <h3>Cabbage</h3>
-        <p>₹24/kg</p>
-        <input type="number" value="1" id="p3">
-        <button onclick="addToCart('Cabbage',30,'p3')">Add</button>
-      </div>
-
- <div class="product-card product-item">
-        <img src="images/brinjal.png" alt="Brinjal">
-        <h3>Brinjal</h3>
-        <p>₹40/kg</p>
-        <input type="number" value="1" id="p3">
-        <button onclick="addToCart('Brinjal',30,'p3')">Add</button>
-      </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Collection</a>
+            <a href="#">Discovery Set</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
 
-       <div class="product-card product-item">
-        <img src="images/carrot.png" alt="Carrot">
-        <h3>Carrot</h3>
-        <p>₹30/kg</p>
-        <input type="number" value="1" id="p3">
-        <button onclick="addToCart('Carrot',30,'p3')">Add</button>
-      </div>
-      
- <div class="product-card product-item">
-        <img src="images/cucumber.png" alt="Cucumber">
-        <h3>Cucumber</h3>
-        <p>₹15/kg</p>
-        <input type="number" value="1" id="p3">
-        <button onclick="addToCart('Cucumber',30,'p3')">Add</button>
-      </div>
+    <!-- HERO SECTION -->
 
- <div class="product-card product-item">
-        <img src="images/broccoli.png" alt="Broccoli">
-        <h3>Broccoli</h3>
-        <p>₹75/kg</p>
-        <input type="number" value="1" id="p3">
-        <button onclick="addToCart('Broccoli',30,'p3')">Add</button>
-      </div>
+    <section class="hero">
 
-       <div class="product-card product-item">
-        <img src="images/mushroom.png" alt="Mushrooms">
-        <h3>Mushrooms</h3>
-        <p>₹80/kg</p>
-        <input type="number" value="1" id="p3">
-        <button onclick="addToCart('Mushrooms',30,'p3')">Add</button>
-      </div>
-      
+        <div class="overlay"></div>
 
-      
-      
-    </div>
-  </div>
-</section>
+        <div class="hero-content">
+            <p class="tagline">Luxury Niche Fragrances</p>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="container">
-    <h2>What Customers Say</h2>
-    <div class="grid">
-      <div class="testimonial">"Very fresh & reliable!"</div>
-      <div class="testimonial">"Saves my daily time"</div>
-      <div class="testimonial">"Best service in city"</div>
-    </div>
-  </div>
-</section>
+            <h1>
+                THE ART OF <br>
+                MODERN LUXURY
+            </h1>
 
-<!-- CART PANEL -->
-<section id="cartPage" class="cart-page">
-  <div class="cart-container">
-    <h2>Your Cart</h2>
-    <div id="cartItems"></div>
-    <h3>Total: <span id="cartTotalPage">₹0</span></h3>
-    <button class="btn" onclick="checkout()">Checkout</button>
-    <button class="btn secondary" onclick="toggleCart()">Close</button>
-  </div>
-</section>
+            <p class="description">
+                Crafted for elegance, power and unforgettable presence.
+            </p>
 
-<script src="script.js"></script>
+            <button>Explore Collection</button>
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED PRODUCTS -->
+
+    <section class="products">
+
+        <div class="section-title">
+            <p>Exclusive Collection</p>
+            <h2>Signature Fragrances</h2>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/noir-oud.jpg" alt="">
+                <h3>NOIR OUD</h3>
+                <p>Dark • Smoky • Royal</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/azure-fresh.jpg" alt="">
+                <h3>AZURE FRESH</h3>
+                <p>Fresh • Aquatic • Elite</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/noir-cafe.jpg" alt="">
+                <h3>NOIR CAFE</h3>
+                <p>Coffee • Warm • Seductive</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISCOVERY SET -->
+
+    <section class="discovery">
+
+        <div class="discovery-left">
+            <img src="images/discovery-set.jpg" alt="">
+        </div>
+
+        <div class="discovery-right">
+            <p>Luxury Experience</p>
+
+            <h2>NOIRÉVA Discovery Set</h2>
+
+            <span>
+                Explore the complete universe of NOIRÉVA through our premium curated fragrance collection.
+            </span>
+
+            <button>Shop Discovery Set</button>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about">
+
+        <div class="about-content">
+
+            <p>About NOIRÉVA</p>
+
+            <h2>
+                Designed For Those <br>
+                Who Desire Exclusivity
+            </h2>
+
+            <span>
+                NOIRÉVA is more than fragrance —
+                it is an identity of confidence,
+                mystery and timeless luxury.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>NOIRÉVA</h2>
+
+        <p>Luxury Fragrances Crafted With Elegance.</p>
+
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Email</a>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
