@@ -1,159 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>NOIRÉVA | Luxury Perfumes</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Luxury Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RK Capital Financial Services — Professional financial solutions and loan assistance for individuals, professionals and businesses.">
+  <meta name="theme-color" content="#11110f">
+  <title>RK Capital Financial Services | Financial Solutions. Professional Guidance.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-mark">RK</div>
+  </div>
 
-    <!-- NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="RK Capital home">
+        <span class="brand-mark">RK</span>
+        <span class="brand-text">
+          <strong>RK CAPITAL</strong>
+          <small>FINANCIAL SERVICES</small>
+        </span>
+      </a>
 
-    <header class="navbar">
-        <div class="logo">NOIRÉVA</div>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Collection</a>
-            <a href="#">Discovery Set</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+      <a class="nav-cta" href="#assistance">Get Assistance <span>↗</span></a>
 
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
-    <!-- HERO SECTION -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#why-us">Why RK Capital</a>
+      <a href="#contact">Contact</a>
+      <a class="mobile-menu-cta" href="#assistance">Get Loan Assistance →</a>
+    </div>
+  </header>
 
+  <main id="home">
     <section class="hero">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> FINANCIAL SOLUTIONS • PROFESSIONAL GUIDANCE</div>
+          <h1>Financial solutions.<br><em>Built around your goals.</em></h1>
+          <p class="hero-lead">
+            Professional assistance for personal, business and property-backed financing requirements — with structured guidance from requirement to disbursement.
+          </p>
 
-        <div class="overlay"></div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#assistance">Get Loan Assistance <span>↗</span></a>
+            <a class="btn btn-secondary" href="#services">Explore Services <span>↓</span></a>
+          </div>
 
-        <div class="hero-content">
-            <p class="tagline">Luxury Niche Fragrances</p>
-
-            <h1>
-                THE ART OF <br>
-                MODERN LUXURY
-            </h1>
-
-            <p class="description">
-                Crafted for elegance, power and unforgettable presence.
-            </p>
-
-            <button>Explore Collection</button>
+          <div class="hero-note">
+            <span class="note-dot"></span>
+            Serving customers with a process-focused approach.
+          </div>
         </div>
 
-    </section>
-
-
-    <!-- FEATURED PRODUCTS -->
-
-    <section class="products">
-
-        <div class="section-title">
-            <p>Exclusive Collection</p>
-            <h2>Signature Fragrances</h2>
-        </div>
-
-        <div class="product-grid">
-
-            <div class="product-card">
-                <img src="images/noir-oud.jpg" alt="">
-                <h3>NOIR OUD SIGNATURE</h3>
-                <p>Dark • Smoky • Royal</p>
+        <div class="hero-visual reveal reveal-delay">
+          <div class="visual-frame">
+            <div class="visual-glow"></div>
+            <div class="visual-content">
+              <span class="visual-label">RK CAPITAL</span>
+              <div class="visual-building">
+                <div class="building building-a"></div>
+                <div class="building building-b"></div>
+                <div class="building building-c"></div>
+                <div class="building building-d"></div>
+              </div>
+              <div class="visual-bottom">
+                <span>SMART FINANCIAL<br>DECISIONS</span>
+                <span class="visual-arrow">↗</span>
+              </div>
             </div>
-
-            <div class="product-card">
-                <img src="images/azure-fresh.jpg" alt="">
-                <h3>AZURE FRESH ELITE</h3>
-                <p>Fresh • Aquatic • Elite</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/noir-cafe.jpg" alt="">
-                <h3>NOIR CAFE SIGNATURE</h3>
-                <p>Coffee • Warm • Seductive</p>
-            </div>
-
+          </div>
+          <div class="floating-card floating-card-top">
+            <span class="mini-icon">✓</span>
+            <div><strong>Structured</strong><small>Process Support</small></div>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <strong>1:1</strong><span>Client Assistance</span>
+          </div>
         </div>
-
+      </div>
     </section>
 
-
-    <!-- DISCOVERY SET -->
-
-    <section class="discovery">
-
-        <div class="discovery-left">
-            <img src="images/discovery-set.jpg" alt="">
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong data-counter="500">500+</strong>
+          <span>Happy Clients*</span>
         </div>
-
-        <div class="discovery-right">
-            <p>Luxury Experience</p>
-
-            <h2>NOIRÉVA Discovery Set</h2>
-
-            <span>
-                Explore the complete universe of NOIRÉVA through our premium curated fragrance collection.
-            </span>
-
-            <button>Shop Discovery Set</button>
+        <div class="trust-item">
+          <strong data-counter="225">225+</strong>
+          <span>Bank & NBFC Network*</span>
         </div>
-
+        <div class="trust-item">
+          <strong>MAHARASHTRA</strong>
+          <span>Service Coverage</span>
+        </div>
+        <div class="trust-item">
+          <strong>END-TO-END</strong>
+          <span>Process Assistance</span>
+        </div>
+      </div>
+      <div class="container micro-note">*Business figures should be updated only with current, verified information.</div>
     </section>
 
-
-    <!-- ABOUT SECTION -->
-
-    <section class="about">
-
-        <div class="about-content">
-
-            <p>About NOIRÉVA</p>
-
-            <h2>
-                Designed For Those <br>
-                Who Desire Exclusivity
-            </h2>
-
-            <span>
-                NOIRÉVA is more than fragrance —
-                it is an identity of confidence,
-                mystery and timeless luxury.
-            </span>
-
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow"><span></span> OUR SOLUTIONS</div>
+            <h2>Financing options for<br><em>different financial needs.</em></h2>
+          </div>
+          <p>Explore assistance across key financing categories with a structured, documentation-focused approach.</p>
         </div>
 
+        <div class="services-grid">
+          <article class="service-card service-card-featured reveal">
+            <div class="service-number">01</div>
+            <div class="service-icon">⌂</div>
+            <h3>Home Loan</h3>
+            <p>Assistance for eligible home purchase, construction and related housing finance requirements.</p>
+            <a href="#assistance">Explore <span>↗</span></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">02</div>
+            <div class="service-icon">▣</div>
+            <h3>Loan Against Property</h3>
+            <p>Property-backed financing assistance for eligible personal and business requirements.</p>
+            <a href="#assistance">Explore <span>↗</span></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">03</div>
+            <div class="service-icon">◆</div>
+            <h3>Business Loan</h3>
+            <p>Funding assistance for eligible business expansion, working capital and related needs.</p>
+            <a href="#assistance">Explore <span>↗</span></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">04</div>
+            <div class="service-icon">◯</div>
+            <h3>Personal Loan</h3>
+            <p>Assistance for eligible personal financial requirements based on the applicable process.</p>
+            <a href="#assistance">Explore <span>↗</span></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">05</div>
+            <div class="service-icon">⌘</div>
+            <h3>Mortgage Finance</h3>
+            <p>Guidance and coordination for eligible mortgage and property-related financing needs.</p>
+            <a href="#assistance">Explore <span>↗</span></a>
+          </article>
+
+          <article class="service-card service-card-dark reveal">
+            <div class="service-number">06</div>
+            <div class="service-icon">+</div>
+            <h3>Other Solutions</h3>
+            <p>Tell us your requirement and our team can help you understand the applicable financing route.</p>
+            <a href="#assistance">Talk to us <span>↗</span></a>
+          </article>
+        </div>
+      </div>
     </section>
 
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <h2>NOIRÉVA</h2>
-
-        <p>Luxury Fragrances Crafted With Elegance.</p>
-
-        <div class="footer-links">
-            <a href="#">Instagram</a>
-            <a href="#">WhatsApp</a>
-            <a href="#">Email</a>
+    <section class="section why-section" id="why-us">
+      <div class="container why-grid">
+        <div class="why-intro reveal">
+          <div class="eyebrow"><span></span> WHY RK CAPITAL</div>
+          <h2>More than loan assistance.<br><em>A structured process.</em></h2>
+          <p>Our approach is built around clear communication, organized documentation and coordinated execution.</p>
+          <a class="text-link" href="#assistance">Start a conversation <span>↗</span></a>
         </div>
 
-    </footer>
+        <div class="why-list">
+          <div class="why-item reveal">
+            <span>01</span>
+            <div><h3>Requirement Analysis</h3><p>Understand the requirement before moving forward.</p></div>
+          </div>
+          <div class="why-item reveal">
+            <span>02</span>
+            <div><h3>Documentation Guidance</h3><p>Clear guidance around the documents relevant to the case.</p></div>
+          </div>
+          <div class="why-item reveal">
+            <span>03</span>
+            <div><h3>Lender Coordination</h3><p>Coordination with relevant available financial institutions.</p></div>
+          </div>
+          <div class="why-item reveal">
+            <span>04</span>
+            <div><h3>Process Support</h3><p>Assistance through applicable stages of the process.</p></div>
+          </div>
+          <div class="why-item reveal">
+            <span>05</span>
+            <div><h3>Client Communication</h3><p>Keep the customer informed throughout the journey.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div>
+            <div class="eyebrow"><span></span> HOW IT WORKS</div>
+            <h2>From requirement to<br><em>disbursement.</em></h2>
+          </div>
+          <p>A simple, organized journey designed to make the financing process easier to understand.</p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="process-line">
+          <div class="process-step reveal">
+            <span class="process-no">01</span>
+            <div class="process-icon">01</div>
+            <h3>Discuss</h3>
+            <p>Share your financial requirement with our team.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-no">02</span>
+            <div class="process-icon">02</div>
+            <h3>Assess</h3>
+            <p>Understand the applicable eligibility and documentation.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-no">03</span>
+            <div class="process-icon">03</div>
+            <h3>Apply</h3>
+            <p>Coordinate the application with the relevant available lender.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-no">04</span>
+            <div class="process-icon">04</div>
+            <h3>Process</h3>
+            <p>Support documentation and application coordination.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-no">05</span>
+            <div class="process-icon">05</div>
+            <h3>Disburse</h3>
+            <p>Coordinate the final stage after applicable approval.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="network-section">
+      <div class="container network-inner reveal">
+        <div>
+          <div class="eyebrow"><span></span> FINANCIAL NETWORK</div>
+          <h2>A network built to<br><em>connect opportunities.</em></h2>
+        </div>
+        <div>
+          <p>We work with a network of financial institutions and channel partners. Partner names and logos will be displayed only after confirmation of current association.</p>
+          <a class="text-link" href="#contact">Discuss your requirement <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="about-card-main">
+            <span>RK</span>
+            <small>EST. FINANCIAL SERVICES</small>
+          </div>
+          <div class="about-card-float">
+            <strong>AKOT</strong>
+            <span>MAHARASHTRA</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <div class="eyebrow"><span></span> ABOUT RK CAPITAL</div>
+          <h2>Built around trust.<br><em>Driven by service.</em></h2>
+          <p>RK Capital Financial Services is a financial consultancy and loan assistance firm based in Akot, Maharashtra.</p>
+          <p>Our approach focuses on understanding the requirement, organizing documentation, coordinating with relevant financial institutions and assisting clients through the applicable process.</p>
+          <div class="about-points">
+            <span>✓ Professional assistance</span>
+            <span>✓ Structured documentation</span>
+            <span>✓ Process coordination</span>
+            <span>✓ Client-focused communication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assistance-section" id="assistance">
+      <div class="container assistance-grid">
+        <div class="assistance-copy reveal">
+          <div class="eyebrow"><span></span> GET STARTED</div>
+          <h2>Have a financial<br><em>requirement?</em></h2>
+          <p>Share a few details. Our team can contact you to understand your requirement and explain the applicable next steps.</p>
+          <div class="contact-mini">
+            <span>📞</span>
+            <div><small>CALL / WHATSAPP</small><strong>Connect with RK Capital</strong></div>
+          </div>
+        </div>
+
+        <form class="lead-form reveal" id="leadForm">
+          <div class="form-row">
+            <label>Full Name<input type="text" name="name" placeholder="Your full name" required></label>
+            <label>Mobile Number<input type="tel" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required></label>
+          </div>
+          <div class="form-row">
+            <label>City<input type="text" name="city" placeholder="Your city" required></label>
+            <label>Loan Requirement
+              <select name="loan" required>
+                <option value="">Select requirement</option>
+                <option>Home Loan</option>
+                <option>Business Loan</option>
+                <option>Loan Against Property</option>
+                <option>Personal Loan</option>
+                <option>Mortgage Finance</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Required Amount<input type="text" name="amount" placeholder="e.g. ₹10,00,000"></label>
+            <label>Occupation / Business Type<input type="text" name="occupation" placeholder="e.g. Business / Salaried"></label>
+          </div>
+          <label>Message<textarea name="message" rows="4" placeholder="Briefly tell us about your requirement"></textarea></label>
+          <button class="btn btn-primary form-submit" type="submit">Request Assistance <span>↗</span></button>
+          <p class="form-note">Your details are used only to respond to your enquiry. Final approval, rate and terms are subject to the concerned financial institution and applicable criteria.</p>
+          <div class="form-success" id="formSuccess">Thank you. Your enquiry has been prepared for RK Capital.</div>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <div class="eyebrow"><span></span> CONTACT</div>
+          <h2>Let's talk about<br><em>your requirement.</em></h2>
+          <p>Reach out to RK Capital Financial Services for a structured discussion about your financing requirement.</p>
+        </div>
+
+        <div class="contact-details reveal">
+          <div class="detail-item">
+            <span>OFFICE</span>
+            <strong>Ground Floor, Shop No. 1,<br>In Front of HP Petrol Pump,<br>Popatkhed Road, Akot – 444101,<br>Maharashtra</strong>
+          </div>
+          <div class="detail-item">
+            <span>QUICK CONTACT</span>
+            <strong>Call / WhatsApp</strong>
+            <small>Number to be added</small>
+          </div>
+          <div class="detail-item">
+            <span>EMAIL</span>
+            <strong>Email to be added</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#home">
+          <span class="brand-mark">RK</span>
+          <span class="brand-text"><strong>RK CAPITAL</strong><small>FINANCIAL SERVICES</small></span>
+        </a>
+        <p>Financial solutions.<br>Professional guidance.</p>
+      </div>
+
+      <div class="footer-links">
+        <div><span>COMPANY</span><a href="#about">About</a><a href="#services">Services</a><a href="#process">How It Works</a></div>
+        <div><span>CONTACT</span><a href="#assistance">Get Assistance</a><a href="#contact">Contact</a><a href="#home">Back to Top ↑</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 RK Capital Financial Services. All Rights Reserved.</span>
+      <span>Information on this website is for general guidance. Financing is subject to applicable lender criteria.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
