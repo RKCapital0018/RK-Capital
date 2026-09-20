@@ -85,11 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // IMPORTANT: Replace the number below with RK Capital's official WhatsApp number.
     const whatsappNumber = "919325854165";
 
-    if (whatsappNumber.includes("X")) {
-      formSuccess.textContent = "Form design is ready. Add RK Capital's official WhatsApp number in script.js to activate enquiry forwarding.";
-      formSuccess.classList.add("show");
-      return;
-    }
+    
 
     window.open(`https://wa.me/${9325854165}?text=${text}`, "_blank");
     formSuccess.textContent = "Your enquiry has been prepared. WhatsApp is opening.";
