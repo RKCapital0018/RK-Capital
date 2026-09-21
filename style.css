@@ -343,3 +343,40 @@ button{cursor:pointer}
   .footer-links{gap:45px}
   .footer-bottom{flex-direction:column}
 }
+
+
+/* ===== FINANCIAL NETWORK — PREMIUM V3 ===== */
+.network-section{position:relative;padding:110px 24px;background:#151515;color:#f5f1e8;overflow:hidden}
+.network-section:before{content:"";position:absolute;width:520px;height:520px;right:-260px;top:-220px;border:1px solid rgba(205,181,132,.10);border-radius:50%;pointer-events:none}
+.network-shell{width:min(1180px,100%);margin:0 auto;position:relative;z-index:1}
+.network-intro{max-width:760px;margin-bottom:58px}
+.network-kicker{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;color:#cdb584;font-size:12px;font-weight:800;letter-spacing:.18em}
+.network-kicker:before{content:"";width:28px;height:1px;background:#cdb584}
+.network-intro h2{margin:0 0 20px;font-size:clamp(38px,5vw,62px);line-height:1.05;letter-spacing:-.035em;font-weight:750}
+.network-intro p{margin:0;max-width:700px;color:rgba(245,241,232,.70);font-size:18px;line-height:1.75}
+.network-flow{display:flex;align-items:center;gap:16px;padding:22px;margin-bottom:26px;border:1px solid rgba(245,241,232,.10);background:rgba(255,255,255,.035);backdrop-filter:blur(12px)}
+.network-flow-item{flex:1;display:flex;align-items:center;gap:14px;min-width:0}
+.network-flow-no{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;border:1px solid rgba(205,181,132,.38);color:#cdb584;font-size:12px;font-weight:800}
+.network-flow-item strong{display:block;font-size:14px;line-height:1.3}
+.network-flow-item small{display:block;margin-top:4px;color:rgba(245,241,232,.48);font-size:12px}
+.network-flow-arrow{color:rgba(205,181,132,.65);font-size:20px}
+.network-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.network-card{min-height:235px;padding:28px 24px;border:1px solid rgba(245,241,232,.10);background:#1b1b1b;transition:transform 220ms ease,border-color 220ms ease,background 220ms ease}
+.network-card:hover{transform:translateY(-5px);border-color:rgba(205,181,132,.35);background:#202020}
+.network-card-icon{display:inline-grid;place-items:center;width:42px;height:42px;margin-bottom:34px;border:1px solid rgba(205,181,132,.30);color:#cdb584;font-size:11px;font-weight:800}
+.network-card-label{display:block;margin-bottom:9px;color:#cdb584;font-size:10px;font-weight:800;letter-spacing:.16em}
+.network-card h3{margin:0 0 11px;font-size:22px;line-height:1.2;letter-spacing:-.02em}
+.network-card p{margin:0;color:rgba(245,241,232,.58);font-size:14px;line-height:1.65}
+.network-note{display:flex;align-items:flex-start;gap:14px;margin-top:18px;padding:18px 20px;border:1px solid rgba(245,241,232,.08);background:rgba(255,255,255,.025)}
+.network-note-mark{display:grid;place-items:center;width:24px;height:24px;flex:0 0 24px;border:1px solid rgba(205,181,132,.42);color:#cdb584;border-radius:50%;font-size:12px;font-weight:800}
+.network-note p{margin:0;color:rgba(245,241,232,.50);font-size:12px;line-height:1.65}
+.network-note strong{color:rgba(245,241,232,.78)}
+.network-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:46px;padding:30px 32px;border:1px solid rgba(205,181,132,.22);background:linear-gradient(90deg,rgba(205,181,132,.07),rgba(255,255,255,.025))}
+.network-cta>div>span{display:block;margin-bottom:7px;color:#cdb584;font-size:10px;font-weight:800;letter-spacing:.16em}
+.network-cta h3{margin:0;font-size:24px;line-height:1.25}
+.network-cta-btn{display:inline-flex;align-items:center;gap:16px;flex:0 0 auto;padding:14px 20px;border:1px solid rgba(205,181,132,.55);color:#f5f1e8;text-decoration:none;font-size:13px;font-weight:750;transition:background 200ms ease,color 200ms ease}
+.network-cta-btn span{color:#cdb584;font-size:18px}
+.network-cta-btn:hover{background:#cdb584;color:#151515}
+.network-cta-btn:hover span{color:#151515}
+@media(max-width:950px){.network-grid{grid-template-columns:repeat(2,1fr)}.network-flow{flex-wrap:wrap}.network-flow-item{flex:1 1 calc(50% - 28px)}.network-flow-arrow{display:none}}
+@media(max-width:680px){.network-section{padding:78px 18px}.network-intro{margin-bottom:38px}.network-intro h2{font-size:36px}.network-intro p{font-size:16px}.network-flow{display:grid;grid-template-columns:1fr;gap:16px;padding:18px}.network-flow-item{flex:none}.network-grid{grid-template-columns:1fr;gap:12px}.network-card{min-height:auto;padding:24px 20px}.network-card-icon{margin-bottom:24px}.network-cta{align-items:flex-start;flex-direction:column;padding:25px 22px}.network-cta h3{font-size:21px}.network-cta-btn{width:100%;justify-content:space-between}}
