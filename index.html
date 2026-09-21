@@ -412,7 +412,86 @@
 </section>
 
 
-    <section class="assistance-section" id="assistance">
+    
+<!-- FINANCIAL TOOLS -->
+<section class="tools-section" id="financial-tools">
+  <div class="tools-shell">
+    <div class="tools-heading">
+      <div class="tools-kicker">FINANCIAL TOOLS</div>
+      <h2>Understand your numbers before you make a financial decision.</h2>
+      <p>Use our simple calculators to estimate your EMI, understand repayment costs and explore different loan scenarios.</p>
+    </div>
+
+    <div class="tools-grid">
+      <article class="tool-card tool-card-featured">
+        <div class="tool-top"><span class="tool-number">01</span><span class="tool-label">MOST USED</span></div>
+        <h3>EMI Calculator</h3>
+        <p>Estimate your monthly EMI, total interest and total repayment.</p>
+        <form class="tool-form" id="emiCalculator">
+          <label>Loan Amount <span>₹</span><input id="emiAmount" type="number" inputmode="decimal" min="1000" max="100000000" step="1000" value="1000000"></label>
+          <label>Interest Rate (% p.a.)<input id="emiRate" type="number" inputmode="decimal" min="0.1" max="40" step="0.1" value="10"></label>
+          <label>Tenure (Years)<input id="emiTenure" type="number" inputmode="numeric" min="1" max="30" step="1" value="10"></label>
+          <button type="submit" class="tool-btn">Calculate EMI <span>→</span></button>
+          <p class="tool-error" id="emiError" aria-live="polite"></p>
+        </form>
+        <div class="tool-result" id="emiResult" aria-live="polite">
+          <div><small>Monthly EMI</small><strong id="emiMonthly">₹0</strong></div>
+          <div><small>Total Interest</small><strong id="emiInterest">₹0</strong></div>
+          <div><small>Total Payable</small><strong id="emiTotal">₹0</strong></div>
+        </div>
+        <a href="#assistance" class="tool-result-cta">Discuss This Requirement →</a>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-top"><span class="tool-number">02</span><span class="tool-label">REVERSE CALCULATION</span></div>
+        <h3>Loan Amount Calculator</h3>
+        <p>See an estimated loan amount based on the EMI you are comfortable with.</p>
+        <form class="tool-form" id="loanAmountCalculator">
+          <label>Comfortable EMI <span>₹</span><input id="affordEmi" type="number" inputmode="decimal" min="500" max="10000000" step="500" value="20000"></label>
+          <label>Interest Rate (% p.a.)<input id="affordRate" type="number" inputmode="decimal" min="0.1" max="40" step="0.1" value="10"></label>
+          <label>Tenure (Years)<input id="affordTenure" type="number" inputmode="numeric" min="1" max="30" step="1" value="10"></label>
+          <button type="submit" class="tool-btn">Estimate Loan Amount <span>→</span></button>
+          <p class="tool-error" id="affordError" aria-live="polite"></p>
+        </form>
+        <div class="tool-result">
+          <div><small>Estimated Loan Amount</small><strong id="affordAmount">₹0</strong></div>
+          <div><small>Estimated Total Payable</small><strong id="affordTotal">₹0</strong></div>
+        </div>
+        <a href="#assistance" class="tool-result-cta">Discuss This Requirement →</a>
+      </article>
+
+      <article class="tool-card tool-card-wide">
+        <div class="tool-top"><span class="tool-number">03</span><span class="tool-label">REPAYMENT VIEW</span></div>
+        <div class="tool-wide-head">
+          <div>
+            <h3>Repayment Schedule</h3>
+            <p>See how each EMI is divided between principal and interest.</p>
+          </div>
+          <button type="button" class="tool-btn tool-btn-small" id="showSchedule">View Schedule <span>→</span></button>
+        </div>
+        <div class="schedule-wrap" id="scheduleWrap">
+          <div class="schedule-summary">
+            <span>Based on your EMI Calculator inputs</span>
+            <strong id="scheduleMeta">—</strong>
+          </div>
+          <div class="schedule-table-wrap">
+            <table>
+              <thead><tr><th>Year</th><th>Principal Paid</th><th>Interest Paid</th><th>Closing Balance</th></tr></thead>
+              <tbody id="scheduleBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tools-disclaimer">
+      <span>i</span>
+      <p><strong>Important:</strong> These calculators provide indicative estimates for planning purposes only. Actual EMI, eligibility, interest rate, fees, approval and final terms depend on the concerned financial institution and applicable criteria.</p>
+    </div>
+  </div>
+</section>
+
+<section class="assistance-section" id="assistance">
       <div class="container assistance-grid">
         <div class="assistance-copy reveal">
           <div class="eyebrow"><span></span> GET STARTED</div>
